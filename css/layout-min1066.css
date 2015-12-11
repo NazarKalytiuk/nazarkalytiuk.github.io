@@ -1,0 +1,232 @@
+﻿@media only screen and (min-width: 1067px) {
+    body {
+        margin: 0 auto;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    #top-wrapper {
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        height: 8vh;
+
+    }
+
+    #top-wrapper h1 {
+        font-size:4vh;
+        float: left;
+        padding: 2vh;
+        margin: 0;
+    }
+
+    header {
+        width: 80%;
+        height: 8vh;
+        padding: 0;
+        margin: auto;
+    }
+
+    menu li a {
+        font-size: 2vh;
+        padding: 2vh 1vw;
+    }
+
+    #main-wrapper {
+        position: relative;
+        top: 8vh;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #about-me-wrapper {
+        position: relative;
+        z-index: 9998;
+        padding-top: 8vh;
+        margin-top: -8vh;
+        width: 100%;
+        height: 100vh;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #about-me {
+        width: 80%;
+        padding: 0;
+        margin: auto;
+        overflow: hidden;
+
+    }
+    #about-me p.hi {
+        font-size: 2.8vw;
+    }
+
+    #about-me p {
+        font-size: 1.7vw;
+    }
+
+    #about-me #right {
+        width: 50%;
+        padding: 10% 0;
+    }
+
+    #about-me #right img {
+        margin: auto;
+        max-width: 100%;
+    }
+
+    #capabilities-wrapper {
+        position: relative;
+        z-index: 9997;
+        padding-top: 8vh;
+        margin-top: -8vh;
+        width: 100%;
+        height: 100vh;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #education-wrapper {
+        position: relative;
+        z-index: 9996;
+        padding-top: 8vh;
+        margin-top: -8vh;
+        width: 100%;
+        height: 100vh;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #capabilities {
+        width: 80%;
+        padding: 0;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    #education {
+        width: 80%;
+        padding: 0;
+        margin: auto;
+        overflow: hidden;
+    }
+    #projects-wrapper {
+        position: relative;
+        z-index: 9995;
+        padding-top: 8vh;
+        margin-top: -8vh;
+        width: 100%;
+        height: 100vh;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #projects {
+        width: 80%;
+        padding: 0;
+        margin: auto;
+        overflow: hidden;
+    }
+    #projects .project:hover{
+        opacity: 0.8;
+    }
+    #projects .project img{
+        max-width: 100%;
+    }
+
+    #projects .more {
+        clear: both;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0;
+    }
+
+    #projects .more a {
+        margin-top: 4vh;
+        display: inline-block;
+        padding: 2vh;
+    }
+
+
+    #footer-wrapper {
+        position: relative;
+        z-index: 9994;
+        padding-top: 8vh;
+        width: 100%;
+    }
+
+    #footer {
+        width: 80%;
+        height: auto;
+        padding: 0;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    #footer-left {
+        width: 33%;
+        float: left;
+        position: relative;
+    }
+
+    #footer-left div {
+        margin: 0 auto;
+        position: relative;
+        padding: 10px 0;
+    }
+
+    #footer-middle {
+        padding: 0;
+        height: 100%;
+        width: 33%;
+        float: left;
+        position: relative;
+    }
+
+    #footer-middle ul {
+        text-align: justify;
+        line-height: 0;
+        margin: 39px 0;
+        padding: 0;
+    }
+
+    #footer-middle ul:after {
+        width: 100%;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        content: '';
+        display: inline-block;
+    }
+
+    #footer-middle ul li {
+        font-size: 33px;
+        display: inline-block;
+        text-align: left;
+    }
+
+    #footer-middle ul li a {
+        display: block;
+    }
+
+    #footer-right {
+        width: 33%;
+        float: left;
+        position: relative;
+    }
+
+    #footer-right a {
+        font-size: 36px;
+        margin: 35px 45%;
+        padding: 5px;
+        display: block;
+    }
+}

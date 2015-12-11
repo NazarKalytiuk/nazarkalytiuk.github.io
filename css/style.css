@@ -1,0 +1,120 @@
+﻿a {
+    color: #268CD6;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #2980b9;
+        text-decoration: none;
+    }
+
+    a.icon-vk:hover {
+        color: #005EB0;
+    }
+
+    a.icon-facebook:hover {
+        color: #033491;
+    }
+
+    a.icon-twitter:hover {
+        color: #00A7ED;
+    }
+
+    a.icon-youtube:hover {
+        color: #EB0B13;
+    }
+
+    a.icon-skype:hover {
+        color: #00A6E3;
+    }
+
+    a.icon-github:hover {
+        color: #F05033;
+    }
+
+#top-wrapper {
+    background-color: #06121D;
+    opacity: 0.9;
+}
+
+    #top-wrapper h1 {
+        font-family: 'Slabo 27px', serif;
+    }
+
+#about-me-wrapper {
+    background-color: #E25454;
+}
+
+#capabilities-wrapper {
+    background-color: #663D4E;
+}
+
+#education-wrapper {
+    background-color: #16a085;
+}
+
+#projects-wrapper {
+    background-color: #e67e22;
+}
+
+#footer-wrapper {
+    background-color: #06121D;
+}
+
+#about-me #left {
+    color: white;
+}
+
+#about-me p.hi {
+    font-family: 'Oswald', sans-serif;
+}
+
+#about-me p {
+    text-shadow: 1px 1px 1px black, 0 0 1px blue;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#capabilities h2, #education h2, #projects h2 {
+    margin: 1vw;
+    font-family: 'Play', sans-serif;
+    font-size: 3vw;
+    text-shadow: 1px 1px 1px black, 0 0 1px blue;
+    color: white !important;
+    text-align: center;
+}
+
+#projects .more a {
+    color:white;
+    font-size: 3vh;
+    background-color: #27ae60;
+    font-family: 'Armata', sans-serif;
+}
+
+    #projects .more a:hover {
+        background-color: #2ecc71;
+    }
+
+#footer {
+    color: #EBECED;
+}
+
+#footer-right a:hover {
+    color: #ED9322;
+}
+
+menu li a {
+    color: #EBECED;
+}
+
+    menu li a span {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    menu li a:hover {
+        color: #ED9322;
+        text-decoration: none;
+    }
+
+    menu li a:current {
+        color: white;
+    }
