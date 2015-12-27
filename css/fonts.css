@@ -1,4 +1,23 @@
 @font-face {
+    font-family: 'NexaHeavy';
+    src: url('../fonts/NexaHeavy.eot');
+    src: url('../fonts/NexaHeavy.eot') format('embedded-opentype'),
+         url('../fonts/NexaHeavy.woff2') format('woff2'),
+         url('../fonts/NexaHeavy.woff') format('woff'),
+         url('../fonts/NexaHeavy.ttf') format('truetype'),
+         url('../fonts/NexaHeavy.svg#NexaHeavy') format('svg');
+}
+
+@font-face {
+    font-family: 'NexaLight';
+    src: url('../fonts/NexaLight.eot');
+    src: url('../fonts/NexaLight.eot') format('embedded-opentype'),
+         url('../fonts/NexaLight.woff2') format('woff2'),
+         url('../fonts/NexaLight.woff') format('woff'),
+         url('../fonts/NexaLight.ttf') format('truetype'),
+         url('../fonts/NexaLight.svg#NexaLight') format('svg');
+}
+@font-face {
 	font-family: 'icomoon';
 	src:url('../fonts/icomoon.eot?ze1ci3');
 	src:url('../fonts/icomoon.eot?#iefixze1ci3') format('embedded-opentype'),
@@ -23,7 +42,6 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
 .icon-arrow-with-circle-up:before {
 	content: "\e600";
 }

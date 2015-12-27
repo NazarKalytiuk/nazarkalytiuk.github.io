@@ -11,53 +11,78 @@
 	<title>Main</title>
 	<link href="css/grid.css" rel="stylesheet" />
 	<link href="css/layout-min1066.css" rel="stylesheet" />
-	<link href="css/layout-max1066.css" rel="stylesheet" />
-	<link href="css/layout-max480.css" rel="stylesheet" />
+<!-- 	<link href="css/layout-max1066.css" rel="stylesheet" />
+	<link href="css/layout-max480.css" rel="stylesheet" /> -->
 	<link href="css/style.css" rel="stylesheet" />
+	<link href="css/gmi.css" rel="stylesheet" />
+	<link href="css/icomoon.css" rel="stylesheet" />
 	<link href="css/fonts.css" rel="stylesheet" />
 	<link href="css/menu.css" rel="stylesheet" />
 	<link href="css/education.css" rel="stylesheet" />
 	<link href="css/capabilities.css" rel="stylesheet" />
 	<link href="css/colors.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Slabo+27px|Lora' rel='stylesheet' type='text/css'/>
 	<link href='https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Abel|Armata|Play|Wire+One' rel='stylesheet' type='text/css'/>
+	<script type="text/javascript" src="js/jquery.1.7.1.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			// Фикмированная шапка при скролле
+			$("#top-wrapper").removeClass("default");
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 20) {
+					$("#top-wrapper").addClass("default").fadeIn('fast');
+				} else {
+					$("#top-wrapper").removeClass("default").fadeIn('fast');
+				};
+			});
+			$('a[href^="#"]').click(function () { 
+			    elementClick = $(this).attr("href");
+				destination = $(elementClick).offset().top;
+				if($.browser.safari){
+				$('body').animate( { scrollTop: destination }, 500 );
+				} else {
+			    	$('html').animate( { scrollTop: destination }, 1000 );
+				}
+				return false;
+		   });
+		});
+	</script>
+	<script src="svgxuse.js"></script>
 </head>
 <body>
 	<div id="top-wrapper">
 		<header>
 			<h1>
 				<a href="index.html">
-					<span class="icon-graduation-cap"></span>
-					Portfolio
+					Nazar Kalytiuk
 				</a>
 			</h1>
 			<menu>
 				<ul>
-					<li><a class="icon-user" href="#about-me-wrapper"> <span>About Me</span></a></li>
-					<li><a class="icon-code" href="#capabilities-wrapper"> <span>Capabilities</span></a></li>
-					<li><a class="icon-graduation-cap" href="#education-wrapper"> <span>Education</span></a></li>
-					<li><a class="icon-attachment" href="#projects-wrapper"> <span>My Project</span></a></li>
-					<li><a class="icon-edit" href="https://vk.com/6e617a6172" target="_blank"> <span>Blog</span></a></li>
+					<li><a class="material-icons md-20">person</a><a href="#about-me-wrapper">About Me</a></li>
+					<li><a class="material-icons md-20">code</a><a href="#capabilities-wrapper">Capabilities</a></li>
+					<li><a class="material-icons md-20">school</a><a href="#education-wrapper">Education</a></li>
+					<li><a class="material-icons md-20">folder</a><a href="#projects-wrapper">My Project</a></li>
+					<li><a class="material-icons md-20">create</a><a href="https://vk.com/6e617a6172" target="_blank">Blog</a></li>
 				</ul>
 			</menu>
 		</header>
 	</div>
 	<main id="main-wrapper">
 		<div id="about-me-wrapper">
-			<div id="about-me" class="row">
-				<div class="col-6" id="left">
-					<p class="hi">
+			<div id="about-me">
+				<div class="hi col-12">
+					<p class="col-6">
 						Hi, I`m Nazar Kalytiuk, an Ukrainian web designer.
 						I create #usable, #responsive interface design,
 						that is nice to look at and easy to use.
 					</p>
-					<p>
+					<!-- <p>
 						I'm a web designer and .NET developer with more than 4 years of professional experience. If you're looking for animations or "wow effects", you'd better change direction! In my works I always try to combine aesthetic with functional aspects, looking for the right balance to communicate without annoying. What makes a great website? Here's my opinion: a successful website should be attractive but easy to read. A fascinating message, together with an immediate understanding. Original content and easily traceable information: that's my recipe!
-					</p>
+					</p> -->
 				</div>
-				<div class="col-6" id="right">
-					<p><img src="img/tad-laptop.png"></p>
-				</div>
+				<a class="button-down button material-icons md-36" href="#capabilities-wrapper">keyboard_arrow_down</a>
 			</div>
 		</div>
 		<div id="capabilities-wrapper">
@@ -147,27 +172,5 @@
 			</div>
 		</div>
 	</main>
-	<div id="footer-wrapper">
-		<footer id="footer">
-			<div id="footer-left" class="col-4">
-				<div><address><span class="icon-home"> </span>Kyiv, Vyborzska str, 59a</address></div>
-				<div><a href="tel:+380689398152"><span class="icon-phone"> </span>+380689398152</a></div>
-				<div><a href="mailto:nazarkalytiuk@gmail.com"><span class="icon-mail"> </span>nazarkalytiuk@gmail.com</a></div>
-			</div>
-			<div id="footer-middle" class="col-4">
-				<ul>
-					<li><a class="icon-vk" href="https://vk.com/6e617a6172" target="_blank"></a></li>
-					<li><a class="icon-facebook" href="https://facebook.com" target="_blank"></a></li>
-					<li><a class="icon-twitter" href="https://twitter.com" target="_blank"></a></li>
-					<li><a class="icon-youtube" href="https://youtube.com" target="_blank"></a></li>
-					<li><a class="icon-skype" href="skype:nazarkalytiuk"></a></li>
-					<li><a class="icon-github" href="https://github.com/" target="_blank"></a></li>
-				</ul>
-			</div>
-			<div id="footer-right" class="col-4">
-				<a class="icon-arrow-with-circle-up" href="#"></a>
-			</div>
-		</footer>
-	</div>
 </body>
 </html>

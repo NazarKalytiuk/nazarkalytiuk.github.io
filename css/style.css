@@ -1,77 +1,113 @@
-﻿a {
+﻿.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {clear: both;}
+
+a {
     color: #268CD6;
     text-decoration: none;
 }
-
-    a:hover {
-        color: #2980b9;
-        text-decoration: none;
-    }
-
-    a.icon-vk:hover {
-        color: #005EB0;
-    }
-
-    a.icon-facebook:hover {
-        color: #033491;
-    }
-
-    a.icon-twitter:hover {
-        color: #00A7ED;
-    }
-
-    a.icon-youtube:hover {
-        color: #EB0B13;
-    }
-
-    a.icon-skype:hover {
-        color: #00A6E3;
-    }
-
-    a.icon-github:hover {
-        color: #F05033;
-    }
-
+#top-wrapper.default {
+    position: fixed;
+    top: 0;
+    opacity: 0.95;
+    background: #212121;
+/*    -webkit-box-shadow: 0 2px 2px #212121;
+       -moz-box-shadow: 0 2px 2px #212121;
+        -ms-box-shadow: 0 2px 2px #212121;
+         -o-box-shadow: 0 2px 2px #212121;
+            box-shadow: 0 2px 2px #212121;*/
+}
+::-webkit-scrollbar{
+    width:5px;
+}
+::-webkit-scrollbar-thumb{
+    border-width:1px 1px 1px 2px;
+    border-color: #777;
+    background-color: #aaa;
+}
+::-webkit-scrollbar-thumb:hover{
+    border-width: 1px 1px 1px 2px;
+    border-color: #555;
+    background-color: #777;
+}
+::-webkit-scrollbar-track{
+    border-width:0;
+}
+::-webkit-scrollbar-track:hover{
+    border-left: solid 1px #aaa;
+    background-color: #eee;
+}
 #top-wrapper {
-    background-color: #06121D;
-    opacity: 0.9;
+    /*background: #00796B;*/
+    /*opacity: 0.9;*/
 }
 
-    #top-wrapper h1 {
-        font-family: 'Slabo 27px', serif;
+    #top-wrapper h1 a{
+        font-family: 'NexaLight';
+        color: #FF5252;
+    }
+    #top-wrapper h1 a:hover{
+        color: #D32F2F;
     }
 
-#about-me-wrapper {
-    background-color: #E25454;
+.button {
+    color: #fff; 
+    user-select: none; /* убирать выделение текста */
+    background: #F44336; 
+    padding: 10px 20px;
 }
-
+.button:hover{
+    background: #FF5252;
+}
+.button:active{
+    background: #D32F2F;
+}
+.button-down {
+    position: absolute;
+    left: 45%;
+    bottom: 5%;
+}
+#about-me {
+    position: relative;
+    width: 80%;
+    height: 100vh;
+}
+#about-me-wrapper {
+    background: #009688 url(../img/background1.jpg) no-repeat center;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
 #capabilities-wrapper {
-    background-color: #663D4E;
+    background-color: #9C27B0;
 }
 
 #education-wrapper {
-    background-color: #16a085;
+    background-color: #E91E63;
 }
 
 #projects-wrapper {
-    background-color: #e67e22;
+    background-color: #3F51B5;
 }
 
 #footer-wrapper {
-    background-color: #06121D;
+    background-color: #0D1011;
 }
-
-#about-me #left {
-    color: white;
+#about-me .hi{
+    margin: 0 auto;
+    padding: 0;
+    float: left;
 }
-
-#about-me p.hi {
-    font-family: 'Oswald', sans-serif;
-}
-
-#about-me p {
-    text-shadow: 1px 1px 1px black, 0 0 1px blue;
-    font-family: 'Roboto Condensed', sans-serif;
+#about-me .hi p {
+    /*font-family: 'Roboto Condensed', sans-serif;*/
+    font-family: 'NexaLight';
+    font-size: 36px;
+    text-align: center;
+    color: #EFEFEF;
 }
 
 #capabilities h2, #education h2, #projects h2 {
@@ -79,7 +115,7 @@
     font-family: 'Play', sans-serif;
     font-size: 3vw;
     text-shadow: 1px 1px 1px black, 0 0 1px blue;
-    color: white !important;
+    color: white;
     text-align: center;
 }
 
@@ -101,20 +137,3 @@
 #footer-right a:hover {
     color: #ED9322;
 }
-
-menu li a {
-    color: #EBECED;
-}
-
-    menu li a span {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    menu li a:hover {
-        color: #ED9322;
-        text-decoration: none;
-    }
-
-    menu li a:current {
-        color: white;
-    }

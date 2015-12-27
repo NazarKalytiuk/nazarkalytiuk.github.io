@@ -4,25 +4,31 @@
 
 menu ul {
     float: right;
-    margin: 10.5px 0;
+    margin: 0;
     padding: 0;
     list-style: none;
 }
 
 menu ul li {
-    display: inline;
+    display: inline-block;
+    vertical-align: center;
     margin: 0;
+        margin: 1vh 0;
+    padding: 2vh 1vw;
 }
 
 menu li a {
-    color: #EBECED;
+    color: #FFF;
     float: left;
+    font-size: 2vh;
+    line-height: 20px;
 }
 
-menu li a span{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+menu li {
+    font-family: 'NexaLight';
 }
 
-menu li a:hover {
-    color: #f39c12;
+menu li:hover {
+    /*color: #FF5252;*/
+    background: rgba(100,100,100,.3);
 }
