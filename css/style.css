@@ -67,7 +67,7 @@ a {
 }
 .button-down {
     position: absolute;
-    left: 45%;
+    left: 47.5%;
     bottom: 5%;
 }
 #about-me {
@@ -83,15 +83,15 @@ a {
             background-size: cover;
 }
 #capabilities-wrapper {
-    background-color: #9C27B0;
+    background-color: #F9F9F9;
 }
 
 #education-wrapper {
-    background-color: #E91E63;
+    background-color: #4A3F60;
 }
 
 #projects-wrapper {
-    background-color: #3F51B5;
+    background-color: #E91E63;
 }
 
 #footer-wrapper {
@@ -112,28 +112,12 @@ a {
 
 #capabilities h2, #education h2, #projects h2 {
     margin: 1vw;
-    font-family: 'Play', sans-serif;
+    font-family: 'NexaLight';
     font-size: 3vw;
-    text-shadow: 1px 1px 1px black, 0 0 1px blue;
-    color: white;
+    color: #F44336;
     text-align: center;
 }
-
-#projects .more a {
-    color:white;
-    font-size: 3vh;
-    background-color: #27ae60;
-    font-family: 'Armata', sans-serif;
+#education h2, #projects h2 {
+    color: #FFF;
 }
 
-    #projects .more a:hover {
-        background-color: #2ecc71;
-    }
-
-#footer {
-    color: #EBECED;
-}
-
-#footer-right a:hover {
-    color: #ED9322;
-}

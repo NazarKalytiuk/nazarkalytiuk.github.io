@@ -13,14 +13,14 @@ menu ul li {
     display: inline-block;
     vertical-align: center;
     margin: 0;
-        margin: 1vh 0;
-    padding: 2vh 1vw;
 }
 
 menu li a {
     color: #FFF;
     float: left;
     font-size: 2vh;
+    margin: 1vh 0;
+    padding: 2vh 1vw;
     line-height: 20px;
 }
 
@@ -28,7 +28,7 @@ menu li {
     font-family: 'NexaLight';
 }
 
-menu li:hover {
+menu li a:hover {
     /*color: #FF5252;*/
     background: rgba(100,100,100,.3);
 }

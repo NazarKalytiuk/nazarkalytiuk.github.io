@@ -1,0 +1,97 @@
+.card-wrapper {
+	position: relative;
+}
+.card {
+	background-color: #fff;
+	margin: 10px;
+}
+.card .top {
+	position: relative;
+	background-color: #C2185B;
+	height: 20px;
+	width: 100%;
+}
+.card header {
+	background-color: #E91E63;
+	width: 100%;
+	color: #FFF;
+	font-size: 23px;
+	padding: 15px;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.checkimg {
+	position: absolute;
+	right: 15px;
+}
+.card .main {
+	padding: 15px;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+	width: 100%;
+	background-color: #fff;
+	border-bottom: #B6B6B6 solid 1px;
+}
+.card span {
+	margin: 0;
+	padding: 0;
+}
+.card-wrapper:nth-child(3) .top {
+	background-color: #D32F2F;
+}
+.card-wrapper:nth-child(3) .header {
+	background-color: #F44336;
+}
+.card-wrapper:nth-child(4) .top {
+	background-color: #7B1FA2;
+}
+.card-wrapper:nth-child(4) .header {
+	background-color: #9C27B0;
+}
+.card-wrapper:nth-child(5) .top {
+	background-color: #FFA000;
+}
+.card-wrapper:nth-child(5) .header {
+	background-color: #FFC107;
+}
+.card-wrapper:nth-child(6) .top {
+	background-color: #00796B;
+}
+.card-wrapper:nth-child(6) .header {
+	background-color: #009688;
+}
+.card-wrapper:nth-child(6) .checkimg {
+	display: none;
+}
+.card-wrapper:nth-child(7) .top {
+	background-color: #303F9F;
+}
+.card-wrapper:nth-child(7) .header {
+	background-color: #3F51B5;
+}
+.card-wrapper:nth-child(8) .top {
+	background-color: #388E3C;
+}
+.card-wrapper:nth-child(8) .header {
+	background-color: #4CAF50;
+}
+.card-wrapper:nth-child(9) .top {
+	background-color: #000;
+}
+.card-wrapper:nth-child(9) .header {
+	background-color: #000;
+}
+.card-wrapper:nth-child(10) .top {
+	background-color: #000;
+}
+.card-wrapper:nth-child(10) .header {
+	background-color: #000;
+}
+.card-wrapper:nth-child(11) .top {
+	background-color: #000;
+}
+.card-wrapper:nth-child(11) .header {
+	background-color: #000;
+}

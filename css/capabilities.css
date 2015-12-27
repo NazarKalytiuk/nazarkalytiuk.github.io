@@ -1,17 +1,15 @@
 ﻿.progress-bar {
     float: left;
     background-color: #06121D;
-    padding: 0.25vh;
+    padding: 1px;
     height: 4vh;
-    font-family: 'Armata', sans-serif;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
     .progress-bar span {
         display: inline-block;
-        height: 3.5vh;
-        padding: 0;
+        height: 99%;
     }
 
         .progress-bar span span.persent {
@@ -23,17 +21,12 @@
             float: right;
             font-size: 3vh;
             vertical-align: central;
-            padding: 0;
-            margin: 0;
-            text-shadow: 1px 1px 1px black, 0 0 1px blue;
         }
 .technology {
-    text-shadow: 1px 1px 1px black, 0 0 1px blue;
-    color: white;
+    color: #212121;
     width: 100%;
     display: inline-block;
     margin: .5vh 0;
-    font-family: 'Armata', sans-serif;
 }
 
     .technology p {
