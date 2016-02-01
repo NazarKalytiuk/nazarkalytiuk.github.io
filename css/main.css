@@ -1,0 +1,905 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  display: none;
+}
+
+::-ms-scrollbar {
+  width: 5px;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border-width: 1px 1px 1px 2px;
+  border-color: #777;
+  background-color: #aaa;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-width: 1px 1px 1px 2px;
+  border-color: #555;
+  background-color: #777;
+}
+
+::-webkit-scrollbar-track {
+  border-width: 0;
+}
+
+::-webkit-scrollbar-track:hover {
+  border-left: solid 1px #aaa;
+  background-color: #eee;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(../fonts/MaterialIcons-Regular.ttf) format("truetype");
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: inherit;
+  /* Preferred icon size */
+  width: 1em;
+  height: 1em;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url("../fonts/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+.material-icons.md-1 {
+  font-size: 1px;
+}
+
+.material-icons.md-2 {
+  font-size: 2px;
+}
+
+.material-icons.md-3 {
+  font-size: 3px;
+}
+
+.material-icons.md-4 {
+  font-size: 4px;
+}
+
+.material-icons.md-5 {
+  font-size: 5px;
+}
+
+.material-icons.md-6 {
+  font-size: 6px;
+}
+
+.material-icons.md-7 {
+  font-size: 7px;
+}
+
+.material-icons.md-8 {
+  font-size: 8px;
+}
+
+.material-icons.md-9 {
+  font-size: 9px;
+}
+
+.material-icons.md-10 {
+  font-size: 10px;
+}
+
+.material-icons.md-11 {
+  font-size: 11px;
+}
+
+.material-icons.md-12 {
+  font-size: 12px;
+}
+
+.material-icons.md-13 {
+  font-size: 13px;
+}
+
+.material-icons.md-14 {
+  font-size: 14px;
+}
+
+.material-icons.md-15 {
+  font-size: 15px;
+}
+
+.material-icons.md-16 {
+  font-size: 16px;
+}
+
+.material-icons.md-17 {
+  font-size: 17px;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-19 {
+  font-size: 19px;
+}
+
+.material-icons.md-20 {
+  font-size: 20px;
+}
+
+.material-icons.md-21 {
+  font-size: 21px;
+}
+
+.material-icons.md-22 {
+  font-size: 22px;
+}
+
+.material-icons.md-23 {
+  font-size: 23px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-25 {
+  font-size: 25px;
+}
+
+.material-icons.md-26 {
+  font-size: 26px;
+}
+
+.material-icons.md-27 {
+  font-size: 27px;
+}
+
+.material-icons.md-28 {
+  font-size: 28px;
+}
+
+.material-icons.md-29 {
+  font-size: 29px;
+}
+
+.material-icons.md-30 {
+  font-size: 30px;
+}
+
+.material-icons.md-31 {
+  font-size: 31px;
+}
+
+.material-icons.md-32 {
+  font-size: 32px;
+}
+
+.material-icons.md-33 {
+  font-size: 33px;
+}
+
+.material-icons.md-34 {
+  font-size: 34px;
+}
+
+.material-icons.md-35 {
+  font-size: 35px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-37 {
+  font-size: 37px;
+}
+
+.material-icons.md-38 {
+  font-size: 38px;
+}
+
+.material-icons.md-39 {
+  font-size: 39px;
+}
+
+.material-icons.md-40 {
+  font-size: 40px;
+}
+
+.material-icons.md-41 {
+  font-size: 41px;
+}
+
+.material-icons.md-42 {
+  font-size: 42px;
+}
+
+.material-icons.md-43 {
+  font-size: 43px;
+}
+
+.material-icons.md-44 {
+  font-size: 44px;
+}
+
+.material-icons.md-45 {
+  font-size: 45px;
+}
+
+.material-icons.md-46 {
+  font-size: 46px;
+}
+
+.material-icons.md-47 {
+  font-size: 47px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+.fab {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 7rem;
+  height: 7rem;
+  background: transparent;
+  overflow: hidden;
+  z-index: 9999;
+}
+.fab.active.shadow {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.fab__button-wrapper {
+  cursor: pointer;
+  width: 4rem;
+  height: 100%;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transform-origin: 0 50% 0;
+}
+.fab__button-wrapper.clicked {
+  right: 46px;
+  -webkit-transform: rotate(90deg) translateY(-96px);
+  transform: rotate(90deg) translateY(-96px);
+  transition: .3s all ease .6s;
+}
+.fab__button-wrapper.clicked .button {
+  opacity: 0;
+  transition: .3s all ease .6s;
+}
+.fab__button-wrapper.clicked .layer {
+  -webkit-transform: scale(100);
+  transform: scale(100);
+  transition: 1.5s all ease .9s;
+}
+.fab__button-wrapper .layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 4rem;
+  height: 4rem;
+  background: #004D40;
+  z-index: -100;
+  border-radius: 50%;
+}
+.fab__button-wrapper .button {
+  width: 4rem;
+  height: 4rem;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+  position: relative;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 2rem;
+  background: #E91E63;
+  align-self: flex-end;
+}
+.fab__button-wrapper .button:hover {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+.fab__layer-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: .3rem;
+  opacity: 0;
+  color: #FAFAFA;
+  font-size: 1.2rem;
+  font-family: 'Roboto-Regular';
+}
+.fab__layer-content.active {
+  opacity: 1;
+}
+.fab__layer__close {
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  padding: .5rem;
+  font-size: 1.8rem;
+  height: 2rem;
+  width: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ripple {
+  border: 1px solid #E91E63;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 50%;
+  z-index: -9;
+  background: transparent;
+  -webkit-transform: scale(0.5);
+  opacity: 1;
+  -webkit-transition: .3s all ease;
+}
+
+.rippling {
+  -webkit-animation: .3s rippling 1;
+}
+
+@-webkit-keyframes rippling {
+  25% {
+    -webkit-transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2);
+    opacity: 0;
+  }
+}
+.top-wrapper {
+  background: url(../img/background1.jpg) no-repeat center/cover;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  min-height: 100vh;
+  font-family: 'Roboto-Light';
+  color: #FAFAFA;
+}
+
+.top {
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.about-wrapper {
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-around;
+  margin: auto;
+  min-height: calc(100vh - 3rem);
+}
+.about-wrapper .about {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  text-align: center;
+}
+.about-wrapper .about__hi {
+  margin: 0 auto;
+  text-shadow: 1px 1px 1px black;
+}
+.about-wrapper .about__hi span {
+  background-color: #1976D2;
+}
+.about-wrapper__button {
+  margin: auto;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.about-wrapper__button a {
+  padding: 1rem .5rem;
+  background-color: #E91E63;
+  transition: .2s linear;
+}
+.about-wrapper__button a:hover {
+  background-color: #C2185B;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-flow: row wrap;
+  line-height: 3rem;
+  height: 3rem;
+  width: 100%;
+  padding: .3rem 0;
+}
+.header__logo {
+  font-family: 'Roboto-Regular';
+  font-size: 1.7rem;
+  display: flex;
+  text-transform: uppercase;
+}
+.header__menu {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: flex-end;
+}
+.header__menu li {
+  padding: 0 .5rem;
+  list-style: none;
+}
+.header__menu li a {
+  display: flex;
+}
+
+.capabilities-wrapper {
+  background: #F5F5F5;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  min-height: 100vh;
+  font-family: 'Roboto-Light';
+  color: #212121;
+}
+
+.capabilities {
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  margin: auto;
+  min-height: 100vh;
+}
+
+.progress {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  width: 100%;
+  margin-bottom: .3rem;
+}
+.progress__head {
+  box-sizing: border-box;
+  width: 33%;
+  height: 3rem;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  text-align: center;
+}
+.progress__progressbar {
+  box-sizing: border-box;
+  background-color: #F5F5F5;
+  height: 3rem;
+  width: 400px;
+  flex-grow: 1;
+}
+.progress__progressbar .fill {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  height: calc(3rem - .2rem);
+  margin: .1rem;
+  background-color: #2196F3;
+}
+.progress__progressbar .fill .persent {
+  margin-right: .3rem;
+  font-size: 1.3rem;
+  line-height: calc(3rem - .2rem);
+}
+
+.progress:nth-child(n+2) .progress__progressbar .fill {
+  background-color: #E91E63;
+}
+
+.progress:nth-child(n+3) .progress__progressbar .fill {
+  background-color: #2196F3;
+}
+
+.progress:nth-child(n+4) .progress__progressbar .fill {
+  background-color: #4CAF50;
+}
+
+.progress:nth-child(n+5) .progress__progressbar .fill {
+  background-color: #FF9800;
+}
+
+.progress:nth-child(n+6) .progress__progressbar .fill {
+  background-color: #009688;
+}
+
+.progress:nth-child(n+7) .progress__progressbar .fill {
+  background-color: #8BC34A;
+}
+
+.progress:nth-child(n+8) .progress__progressbar .fill {
+  background-color: #00BCD4;
+}
+
+.progress:nth-child(n+9) .progress__progressbar .fill {
+  background-color: #9C27B0;
+}
+
+.projects-wrapper {
+  background: #006064;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  font-family: 'Roboto-Light';
+  color: #FAFAFA;
+}
+
+.projects {
+  z-index: 1;
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.project {
+  z-index: 1;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  background-color: #F5F5F5;
+  color: #212121;
+  display: flex;
+  position: relative;
+  min-width: 25%;
+  width: 250px;
+  flex-grow: 1;
+  margin: 1rem;
+  flex-flow: column wrap;
+}
+.project__img {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  background: #9E9E9E;
+}
+.project__img__button {
+  background-color: #FF1744;
+  color: #FFFFFF;
+  padding: .5rem;
+  font-size: 1.8rem;
+  height: 2rem;
+  width: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -1rem;
+  right: .5rem;
+  cursor: pointer;
+}
+.project__img__button:hover {
+  background-color: #D50000;
+}
+.project__img__button.ripple {
+  border-color: #D50000;
+}
+.project__img img {
+  width: 100%;
+  height: 100%;
+}
+.project__info {
+  font-size: 1.3rem;
+  padding: .3rem;
+}
+.project__info i {
+  float: left;
+  margin-right: .3rem;
+}
+.project__info *:last-child {
+  border: none;
+}
+.project__info__adress {
+  line-height: 2rem;
+  border-bottom: 1px solid #9E9E9E;
+}
+.project__info__adress a {
+  cursor: pointer;
+  color: #2196F3;
+}
+.project__info__adress a:hover {
+  color: #1976D2;
+}
+.project__info__date {
+  line-height: 2rem;
+  border-bottom: 1px solid #9E9E9E;
+}
+.project__layer {
+  position: absolute;
+  background-color: #F5F5F5;
+  top: 100%;
+  width: 100%;
+  height: 0;
+  transition: .3s ease-out;
+  overflow: hidden;
+}
+.project__layer .project__info * {
+  border: none;
+}
+.project__layer__button {
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  padding: .5rem;
+  font-size: 1.8rem;
+  height: 2rem;
+  width: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.project__layer--active {
+  overflow: auto;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.textfield {
+  margin: 1.5rem 1rem;
+  position: relative;
+  font-size: 1.3rem;
+  display: inline-block;
+  box-sizing: border-box;
+  width: calc(100% - 6rem);
+  max-width: 100%;
+  transform-origin: 0 0 0;
+}
+.textfield * {
+  box-sizing: border-box;
+}
+.textfield__input {
+  border: none;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #F5F5F5;
+  display: block;
+  padding: .6rem .6rem .6rem .3rem;
+  width: 100%;
+  background: none;
+  text-align: left;
+  color: inherit;
+}
+.textfield__input:focus {
+  outline: none;
+}
+.textfield__label {
+  bottom: 0;
+  font-size: 1.2rem;
+  left: .3rem;
+  top: .6rem;
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  width: 100%;
+  -webkit-transition: all .2s ease;
+}
+.textfield__bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.textfield__bar:before, .textfield__bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #F5F5F5;
+  -webkit-transition: all .2s ease;
+}
+.textfield__bar:before {
+  left: 50%;
+}
+.textfield__bar:after {
+  right: 50%;
+}
+
+input:focus ~ label, input:valid ~ label {
+  top: -1.1rem;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+input:focus ~ .textfield__bar:before, input:focus ~ .textfield__bar:after {
+  width: 50%;
+}
+
+textarea:focus ~ label, textarea:valid ~ label {
+  top: -1.1rem;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+textarea:focus ~ .textfield__bar:before, textarea:focus ~ .textfield__bar:after {
+  width: 50%;
+}
+
+.form__submit {
+  border: none;
+  cursor: pointer;
+  color: #F5F5F5;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  background-color: #E91E63;
+  transition: .2s linear;
+}
+.form__submit:hover {
+  background-color: #C2185B;
+}
+.form__submit i {
+  float: left;
+  margin-right: 2px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  transition: .2s linear;
+}
+
+@media screen and (min-width: 2560px) {
+  html {
+    font-size: 190%;
+  }
+}
+@media screen and (min-width: 1920px) and (max-width: 2560px) {
+  html {
+    font-size: 160%;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+  html {
+    font-size: 110%;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
+  html {
+    font-size: 90%;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+}
+body {
+  background-color: #F5F5F5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section-header {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  width: 100%;
+}
