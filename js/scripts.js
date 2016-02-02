@@ -59,44 +59,21 @@ $(document).ready(function(){
 	});
 
 	$(window).scroll(function () {
-		var html = "90%",
-			 css = "90%",
-			 javascript = "80%",
-			 jQuery = "76%",
-			 framworks = "75%",
-			 PSDtoHTML = "75%",
-			 SEO = "70%",
-			 NET = "60%";
+		var capabilities = ["90%","90%","80%","76%","75%","75%","70%","60%"];
 		if (($(this).scrollTop() + $(window).innerHeight()) > $('.progress').eq(2).offset().top & $(this).scrollTop() < $('.progress').eq(7).offset().top + 100) 
 		{
-			$('.fill').eq(0).css("width", html).delay(100).queue(function(){
-				$('.fill').eq(1).css("width", css).delay(100).queue(function(){
-					$('.fill').eq(2).css("width", javascript).delay(100).queue(function(){
-						$('.fill').eq(3).css("width", jQuery).delay(100).queue(function(){
-							$('.fill').eq(4).css("width", framworks).delay(100).queue(function(){
-								$('.fill').eq(5).css("width", PSDtoHTML).delay(100).queue(function(){
-									$('.fill').eq(6).css("width", SEO).delay(100).queue(function(){
-										$('.fill').eq(7).css("width", NET).delay(100).queue(function(){
-											$(this).dequeue();
-										});
-										$(this).dequeue();
-									});
-									$(this).dequeue();
-								});
-								$(this).dequeue();
-							});
-							$(this).dequeue();
-						});
-						$(this).dequeue();
-					});
-					$(this).dequeue();
-				});
-				$(this).dequeue();
-			});
+			for(i=0; i<=7; ++i)
+			{
+				$('.fill').eq(i).css("width", capabilities[i]);
+			}
 		}
-		// else if ($(this).scrollTop() > $('.progress').eq(7).offset().top) {
-		else {
-			$('.fill').css("width",0);
+		else 
+		{
+			for(i=0; i<=7; ++i)
+			{
+				$('.fill').eq(i).css("width", 0);
+			}
 		} 
 	})
+
 });
