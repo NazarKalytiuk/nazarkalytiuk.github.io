@@ -629,7 +629,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .projects-wrapper {
-  background: #00838F;
+  background: #006064;
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;
@@ -850,7 +850,7 @@ textarea:focus ~ .textfield__bar:before, textarea:focus ~ .textfield__bar:after 
 }
 
 .footer-wrapper {
-  background-color: #006064;
+  background-color: #00838F;
   width: 100%;
   height: 3.5rem;
   font-family: 'Roboto-Light';
