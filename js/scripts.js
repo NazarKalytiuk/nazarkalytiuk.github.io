@@ -24,13 +24,14 @@ $(document).ready(function(){
 
 	$('.fab .button').on('click', function(){
 		$('.fab').addClass('active').delay(100).queue(function(){
-			if(window.innerHeight > window.innerWidth) {
+			if(window.innerWidth > 600)
+			{
 				$('.fab.active').css('height', "32rem");
 				$('.fab.active').css('width', "32rem");
 			}
 			else {
-				$('.fab.active').css('height', "32rem");
-				$('.fab.active').css('width', "32rem");
+				$('.fab.active').css('height', "100%");
+				$('.fab.active').css('width', "100%");
 			}
 			$(this).dequeue();
 		})
