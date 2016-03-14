@@ -1,0 +1,61 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+@import "colors";
+@import "scrollbar";
+@import "fonts";
+@import "shadows";
+@import "textfield";
+@import "ripple";
+@import "button";
+@import "header";
+@import "second";
+@import "third";
+@import "fourth";
+@import "footer";
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 100%;
+	min-height: 100vh;
+}
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+}
+h2 {
+	font-size: 1.4rem;
+	padding: .5rem .2rem;
+}
+p {
+	padding: .2rem;
+}
+a {
+	text-decoration: none;
+}
+a.back {
+	overflow: hidden;
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	color: white;
+	text-decoration: none;
+	font-size: 3rem;
+	& i {
+	}
+}
+

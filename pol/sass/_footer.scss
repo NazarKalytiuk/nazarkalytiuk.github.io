@@ -1,0 +1,24 @@
+.footer {
+	position: relative;
+	width: 100%;
+	height: 10vh;
+	display: flex;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	background-color: $grey--900;
+	align-items: center;
+}
+.footer__container {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	align-items: flex-start;
+	position: relative;
+	color: white;
+	font-family: 'Roboto';
+	text-align: justify;
+	& div {
+		width: 50%;
+	}
+}

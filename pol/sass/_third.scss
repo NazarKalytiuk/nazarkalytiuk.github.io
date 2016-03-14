@@ -1,0 +1,82 @@
+.third-wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	background-color: $red--900;
+}
+.warsava {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	align-items: flex-start;
+	position: relative;
+	&__header {
+		height: 5rem;
+		align-items: baseline;
+		text-shadow: 1px 1px 1px $grey--900;
+		width: 100%;
+		display: flex;
+		color: $white;
+		padding: .5rem .2rem;
+		font-family: 'Roboto';
+		font-size: 3rem;
+		& span {
+			font-size: 2rem;
+			text-transform: uppercase;
+			&::before {
+				content: '\00a0 ';
+			}
+		}
+	}
+	&__img {
+		position: relative;
+		width: 50%;
+		display: flex;
+		flex-wrap: wrap;
+		height: 85vh;
+		background-color: $black;
+		& img {
+			flex-grow: 1.1;
+			border: .1rem solid $red--900;
+			@include shadow4();
+			background-color: $black;
+			transition: .4s ease;
+			&:hover {
+				opacity: .5;
+			}
+		}
+	}
+	&__content {
+		color: $white;
+		font-family: 'Roboto';
+		text-shadow: 1px 1px 1px $grey--900;
+		font-size: 1.1rem;
+		line-height: 1.4rem;
+		padding: 0 1rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 50%;
+		text-align: justify;
+		& .btn {
+			display: flex;
+			position: relative;
+			overflow: hidden;
+			cursor: pointer;
+			text-transform: uppercase;
+			margin: .5rem;
+			padding: 1rem 2rem;
+			background-color: $pink--900;
+			color: $blue--50;
+			text-shadow: none;
+			transition: .4s ease;
+			&:hover {
+				@include shadow4();
+			}
+		}
+	}
+}

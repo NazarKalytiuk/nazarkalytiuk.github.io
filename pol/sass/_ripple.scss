@@ -1,0 +1,25 @@
+.ripple {
+	&--active {
+		width: 2px;
+		height: 2px;
+		top: 50%;
+		left: 50%;
+		position: absolute;
+		border-radius: 50%;
+		background-color: white;
+		opacity: 0;
+		-webkit-transform: scale(0);
+	}
+	&--animate {
+		animation: rippling 1s ease-out;
+	}
+}
+@keyframes rippling {
+	0% {
+		-webkit-transform: scale(1);
+		opacity: .8;
+	}
+	100% {
+		-webkit-transform: scale(100);
+	}
+}
