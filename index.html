@@ -3,133 +3,358 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Default</title>
-	<link rel="shortcut icon" href="https://github.com/NazarKalytiuk/nazarkalytiuk.github.io/blob/master/pol/img/favicon.PNG" type="image/png">
-	<link rel="stylesheet" href="css/style.css">
+	<title>NazarKalytiuk</title>
+	<link rel="stylesheet" href="css/main.css">
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/scripts.js"></script>
 </head>
 <body>
-	<section class="top-wrapper">
-		<header class="header container">
-			<div class="header__logo">
-				<img src="/pol/img/logo.png" alt="logo">
-			</div>
-			<div class="header__tagline">
-				<span>Polish</span>
-				<span>Tourist</span>
-				<span>Organization</span>
-			</div>
-			<menu class="header__menu">
-				<a class="ripple" href="page2.html">Варшава</a>
-				<a class="ripple" href="page3.html">Країна толерантрості</a>
-			</menu>
-		</header>
-		<div class="tagline-container container">
-			<div class="tagline">
-				<span>Польща</span>
-				<span>Міста та культурна спадщина</span>
+	<div class="fab">
+		<div class="fab__button-wrapper">
+			<div class="layer"></div>
+			<div class="button">
+				<div class="ripple"></div>
+				<i class="material-icons">create</i>
 			</div>
 		</div>
+		<div class="fab__layer-content">
+			<div class="fab__layer__close"><i class="material-icons">clear</i></div>
+			<form action="">
+				<div class="textfield">
+					<input type="text" required class="textfield__input" id="name">
+					<span class="textfield__bar"></span>
+					<label for="name" class="textfield__label">Name...</label>
+				</div>
+				<div class="textfield">
+					<input type="text" required class="textfield__input" id="name">
+					<span class="textfield__bar"></span>
+					<label for="name" class="textfield__label">E-mail...</label>
+				</div>
+				<div class="textfield">
+					<textarea rows="7" cols="30" required class="textfield__input" id="name"></textarea>
+					<span class="textfield__bar"></span>
+					<label for="name" class="textfield__label">Massage...</label>
+				</div>
+
+				<button class="form__submit" type="submit">
+					<i class="material-icons">send</i>
+					<span>Send</span>
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<section class="top-wrapper" id="About">
+		<section class="top container">
+			<header class="header">
+				<div class="header__logo"><h1>Nazar Kalytiuk</h1>
+				</div>
+				<ul class="header__menu">
+					<li><a href="#About">About</a></li>
+					<li><a href="#Capabilities">Capabilities</a></li>
+					<li><a href="#Projects">Projects</a></li>
+					<li><a href="https://twitter.com/NazarKalytiuk" target="_blank">Blog</a></li>
+					<li><a href="https://github.com/NazarKalytiuk" target="_blank">GitHub</a></li>
+				</ul>
+			</header>
+		</section>
+		<section class="about-wrapper container">
+			<div class="about">
+				<span class="about__hi">
+					Hi, I`m Nazar Kalytiuk, an Ukrainian web designer. <br>
+					I create <span>#usable</span>, <span>#responsive</span> interface design, <br>
+					that is nice to look at and easy to use.
+				</span>
+			</div>
+			<div class="about-wrapper__button">
+				<a href="#Capabilities">Get in Touch</a>
+			</div>
+		</section>
 	</section>
-	<section class="second-wrapper">
-		<div class="about container">
-			<aside class="about__map">
-				<img src="img/map.png" alt="map">
-			</aside>
-			<article class="about__content">
-				<div class="about__content__img">
-					<img src="img/childrens.png" alt="childrens">
+
+	<section class="capabilities-wrapper"  id="Capabilities">
+		<section class="capabilities  container">
+			<h1 class="section-header">Capabilities</h1>
+
+			<div class="progress">
+				<div class="progress__head">HTML</div>
+				<div class="progress__progressbar">
+					<span class="fill">
+						<span class="persent">90%</span>
+					</span>
 				</div>
-				<div class="about__content__text">
-					<h2>Польща - країна в серці Європи</h2>
-					<p>Польща, одна з найбільших європейських країн, що має вихід до Балтійського
-						моря, розташована у центрі Європи на перехресті доріг із Заходу на Схід,
-						а також з Півночі на Південь. Протягом багатьох століть мала нерозривний
-						зв’язок західноєвропейською культурою. Під впливом латинської цивілізації
-						опинилася у 966 році, коли польський князь Мєшко І прийняв хрещення.
-						Столиця і великі міста Польщі мають розвинену інфраструктуру, приваблюючи
-						любителів історії і тих, кого цікавить культурна спадщина інших народів.
-						Незважаючи на великі руйнування, які спричинила Друга світова війна, в
-						Польщі вціліло багато пам’яток світового значення. До Списку об’єктів Світової
-						культурної спадщини ЮНЕСКО внесено 19 з них, у 13 категоріях, ще кілька
-						чекають на визнання.
-						Визнані шедеври – архітектурні ансамблі середмість Кракова, Варшави, Торуня
-						і Замостя, копальня соліу Величці, яка безупинно працює понад 700 років,
-						один із найбільших у світі середньовічний замок хрестоносців у Мальборку,
-						монастирський комплекс Бернардинів у Кальварії Зебжидовській – святе місце
-						для прочан, німецький концентраційний табір Аушвіц-Біркенау, два Храми
-						Миру в Яворові та Свидниці, шість дерев’яних храмів у південній Малопольщі,
-						польсько-німецький ландшафтний Мужаковський парк у Ленкниці, модерний
-						із залізобетону Зал Століття (Народний зал) у Вроцлаві та первозданна
-						Біловезька пуща.
-						Мандрівка до Польщі – це не лише можливість ознайомитися з пам’ятками
-						архітектури, але й нагода скуштувати різноманітні національні страви, чимало
-						з яких можуть стати відкриттям навіть для найвибагливіших гурманів. У
-						Польщі також можна ознайомитися із сучасною культурою і мистецтвом, що
-						тісно пов’язані із європейською традицією: живописом, плакатною графікою,
-						музикою, прикладним мистецтвом – художньою керамікою, тканиною, склом.
-						Важко не піддатися чарам ювелірних виробів з бурштину – каменю, в якому
-						зачарована сама історія.</p>
+			</div>
+			<div class="progress">
+				<div class="progress__head">CSS</div>
+				<div class="progress__progressbar">
+					<span class="fill">
+						<span class="persent">90%</span>
+					</span>
+				</div>
+			</div>
+			<div class="progress">
+				<div class="progress__head">javascript</div>
+				<div class="progress__progressbar">
+					<span class="fill">
+						<span class="persent">80%</span>
+					</span>
+				</div>
+			</div>
+			<div class="progress">
+				<div class="progress__head">jQuery</div>
+				<div class="progress__progressbar">
+					<span class="fill">
+						<span class="persent">76%</span>
+					</span>
+				</div>
+			</div>
+			<div class="progress">
+				<div class="progress__head">Frameworks</div>
+				<div class="progress__progressbar">
+					<span class="fill">
+						<span class="persent">75%</span>
+					</span>
+				</div>
+			</div>
+			<div class="progress">
+				<div class="progress__head">PSD to HTML</div>
+				<div class="progress__progressbar">
+					<span class="fill">
+						<span class="persent">75%</span>
+					</span>
+				</div>
+			</div>
+			<div class="progress">
+				<div class="progress__head">SEO</div>
+				<div class="progress__progressbar">
+					<span class="fill">
+						<span class="persent">70%</span>
+					</span>
+				</div>
+			</div>
+			<div class="progress">
+				<div class="progress__head">.NET</div>
+				<div class="progress__progressbar">
+					<span class="fill">
+						<span class="persent">60%</span>
+					</span>
+				</div>
+			</div>
+
+		</section>
+	</section>
+
+	<section class="projects-wrapper" id="Projects">
+		<h1 class="section-header">Latest Projects</h1>
+		<section class="projects container">
+
+			<div class="project">
+				<div class="project__img">
+					<img src="img/card.png" alt="">
+					<a class="project__img__button"><div class="ripple"></div><i class="material-icons">grade</i></a>
+				</div>
+				<div class="project__info">
+					<div class="project__info__adress">
+						<i class="material-icons">open_in_new</i>
+						<a href="nazarkalytiuk.github.io">nazarkalytiuk.github.io</a>
 					</div>
-				</article>
-			</div>
-		</section>
-		<section class="third-wrapper">
-			<div class="warsava container">
-				<header class="warsava__header">
-					Варшава - <span> місто з принадами</span>
-				</header>
-				<div class="warsava__img">
-					<img src="/pol/img/ws1.png" alt="ws">
-					<img src="/pol/img/ws2.png" alt="ws">
-					<img src="/pol/img/ws3.png" alt="ws">
-					<img src="/pol/img/ws4.png" alt="ws">
+					<div class="project__info__date">
+						<i class="material-icons">access_time</i>
+						<span>01/29/2016</span>
+					</div>
 				</div>
-				<div class="warsava__content">
-					Варшава – це місто, де зустрічаються традиція і сучасність. З тераси Замкової Площі, розташованої поміж
-					Королівським Замком і костелом св. Анни, видно яскраво
-					освітлений уночі сучасний Свєнтокшиський Міст. У
-					центрі міста височіє соцреалістичний будинок Палацу
-					культури і науки, але довкола щораз більше з’являється
-					скляних хмарочосів-офісних центрів. Подих історії
-					найбільше відчувається у Старому Місті та на вулиці
-					Новий Світ (Nowy Świat), де архітектура зберегла тради-
-					ційний варшавський характер.
+				<div class="project__layer">
+					<a class="project__layer__button"><i class="material-icons">clear</i></a>
+					<div class="project__info">
+						<div class="project__info__adress">
+							<i class="material-icons">open_in_new</i>
+							<a href="nazarkalytiuk.github.io">nazarkalytiuk.github.io</a>
+						</div>
+						<div class="project__info__date">
+							<i class="material-icons">access_time</i>
+							<a href="nazarkalytiuk.github.io">01/29/2016</a>
+						</div>
+						<div class="project__info__desc">Landing page web designer portfolio with some animation. Work was in material design with many bright colors
+						</div>
+					</div>
+				</div>
+			</div>
 
-					<a class="btn ripple" href="page2.html">Далі</a>
+			<div class="project">
+				<div class="project__img">
+					<img src="img/card.png" alt="">
+					<a class="project__img__button"><div class="ripple"></div><i class="material-icons">grade</i></a>
+				</div>
+				<div class="project__info">
+					<div class="project__info__adress">
+						<i class="material-icons">open_in_new</i>
+						<a href="nazarkalytiuk.github.io">nazarkalytiuk.github.io</a>
+					</div>
+					<div class="project__info__date">
+						<i class="material-icons">access_time</i>
+						<span>01/29/2016</span>
+					</div>
+				</div>
+				<div class="project__layer">
+					<a class="project__layer__button"><i class="material-icons">clear</i></a>
+					<div class="project__info">
+						<div class="project__info__adress">
+							<i class="material-icons">open_in_new</i>
+							<a href="nazarkalytiuk.github.io">nazarkalytiuk.github.io</a>
+						</div>
+						<div class="project__info__date">
+							<i class="material-icons">access_time</i>
+							<a href="nazarkalytiuk.github.io">01/29/2016</a>
+						</div>
+						<div class="project__info__desc">Landing page web designer portfolio with some animation. Work was in material design with many bright colors
+						</div>
+					</div>
 				</div>
 			</div>
-		</section>
-		<section class="fourth-wrapper">
-			<div class="toler container">
-				<header class="toler__header">
-					Польща - <span>країна толерантрості</span>
-				</header>
-				<div class="toler__content">
-					Католицькі святі місця по особливому позначені на польській землі.
-					Найпопулярнішим місцем є монастир паулінів на Ясній Горі в Ченстохові,
-					де зберігається чудотворна ікона Божою Матері, символ релігійності
-					краю. Сюди йдуть паломники не тільки з Польщі. Вірні інших релігій
-					мають свої освячені культові місця: правослані збираються в Грабарці
-					на Підляшші, протестанти – в Карпачу, Віслі та Цешині, а мусульмани в Богоніках.
 
-					<a class="btn ripple" href="page3.html">Далі</a>
+			<div class="project">
+				<div class="project__img">
+					<img src="img/card.png" alt="">
+					<a class="project__img__button"><div class="ripple"></div><i class="material-icons">grade</i></a>
 				</div>
-				<div class="toler__img">
-					<img src="/pol/img/tl1.png" alt="ws">
+				<div class="project__info">
+					<div class="project__info__adress">
+						<i class="material-icons">open_in_new</i>
+						<a href="nazarkalytiuk.github.io">nazarkalytiuk.github.io</a>
+					</div>
+					<div class="project__info__date">
+						<i class="material-icons">access_time</i>
+						<span>01/29/2016</span>
+					</div>
 				</div>
+				<div class="project__layer">
+					<a class="project__layer__button"><i class="material-icons">clear</i></a>
+					<div class="project__info">
+						<div class="project__info__adress">
+							<i class="material-icons">open_in_new</i>
+							<a href="nazarkalytiuk.github.io">nazarkalytiuk.github.io</a>
+						</div>
+						<div class="project__info__date">
+							<i class="material-icons">access_time</i>
+							<a href="nazarkalytiuk.github.io">01/29/2016</a>
+						</div>
+						<div class="project__info__desc">Landing page web designer portfolio with some animation. Work was in material design with many bright colors
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="project">
+				<div class="project__img">
+					<img src="img/card.png" alt="">
+					<a class="project__img__button"><div class="ripple"></div><i class="material-icons">grade</i></a>
+				</div>
+				<div class="project__info">
+					<div class="project__info__adress">
+						<i class="material-icons">open_in_new</i>
+						<a href="nazarkalytiuk.github.io">nazarkalytiuk.github.io</a>
+					</div>
+					<div class="project__info__date">
+						<i class="material-icons">access_time</i>
+						<span>01/29/2016</span>
+					</div>
+				</div>
+				<div class="project__layer">
+					<a class="project__layer__button"><i class="material-icons">clear</i></a>
+					<div class="project__info">
+						<div class="project__info__adress">
+							<i class="material-icons">open_in_new</i>
+							<a href="nazarkalytiuk.github.io">nazarkalytiuk.github.io</a>
+						</div>
+						<div class="project__info__date">
+							<i class="material-icons">access_time</i>
+							<a href="nazarkalytiuk.github.io">01/29/2016</a>
+						</div>
+						<div class="project__info__desc">Landing page web designer portfolio with some animation. Work was in material design with many bright colors
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="project">
+				<div class="project__img">
+					<img src="img/card.png" alt="">
+					<a class="project__img__button"><div class="ripple"></div><i class="material-icons">grade</i></a>
+				</div>
+				<div class="project__info">
+					<div class="project__info__adress">
+						<i class="material-icons">open_in_new</i>
+						<a href="nazarkalytiuk.github.io">nazarkalytiuk.github.io</a>
+					</div>
+					<div class="project__info__date">
+						<i class="material-icons">access_time</i>
+						<span>01/29/2016</span>
+					</div>
+				</div>
+				<div class="project__layer">
+					<a class="project__layer__button"><i class="material-icons">clear</i></a>
+					<div class="project__info">
+						<div class="project__info__adress">
+							<i class="material-icons">open_in_new</i>
+							<a href="nazarkalytiuk.github.io">nazarkalytiuk.github.io</a>
+						</div>
+						<div class="project__info__date">
+							<i class="material-icons">access_time</i>
+							<a href="nazarkalytiuk.github.io">01/29/2016</a>
+						</div>
+						<div class="project__info__desc">Landing page web designer portfolio with some animation. Work was in material design with many bright colors
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="project">
+				<div class="project__img">
+					<img src="img/card.png" alt="">
+					<a class="project__img__button"><div class="ripple"></div><i class="material-icons">grade</i></a>
+				</div>
+				<div class="project__info">
+					<div class="project__info__adress">
+						<i class="material-icons">open_in_new</i>
+						<a href="nazarkalytiuk.github.io">nazarkalytiuk.github.io</a>
+					</div>
+					<div class="project__info__date">
+						<i class="material-icons">access_time</i>
+						<span>01/29/2016</span>
+					</div>
+				</div>
+				<div class="project__layer">
+					<a class="project__layer__button"><i class="material-icons">clear</i></a>
+					<div class="project__info">
+						<div class="project__info__adress">
+							<i class="material-icons">open_in_new</i>
+							<a href="nazarkalytiuk.github.io">nazarkalytiuk.github.io</a>
+						</div>
+						<div class="project__info__date">
+							<i class="material-icons">access_time</i>
+							<a href="nazarkalytiuk.github.io">01/29/2016</a>
+						</div>
+						<div class="project__info__desc">Landing page web designer portfolio with some animation. Work was in material design with many bright colors
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+	</section>
+
+	<section class="footer-wrapper">
+		<section class="footer">
+			<div class="footer__copyright">
+				© Copyright Nazar Kalytiuk 2016
+			</div>
+			<div class="footer__links">
+				<a href="https://dribbble.com/NazarKalytiuk" target="_blank">dribble</a>
+				<a href="https://twitter.com/NazarKalytiuk" target="_blank">twitter</a>
+				<a href="https://linkedin.com/NazarKalytiuk" target="_blank">linkedin</a>
+				<a href="https://github.com/NazarKalytiuk" target="_blank">github</a>
 			</div>
 		</section>
-		<footer class="footer">
-			<div class="footer__container container">
-				<div>Видавець: Польська Туристична Організація / Polska Organizacja Turystyczna</div>
-				<div>00-613 Варшава, вул. Халубінського 8</div>
-				<div>тел. +48-22 536 70 70</div>
-				<div>факс +48-22 536 70 04</div>
-				<div>e-mail: pot@pot.gov.pl</div>
-				<div>www.pot.gov.pl</div>
-			</div>
-		</footer>
-	</body>
-	</html>
+	</section>
+</body>
+</html>
