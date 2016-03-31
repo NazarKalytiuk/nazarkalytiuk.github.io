@@ -1,0 +1,350 @@
+/* the styles for the elements */
+* { padding: 0; margin: 0; }
+
+html {
+    background-color: white;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 800px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border: 3px solid #931420;
+    background-color: #fffded;
+}
+
+a { 
+    font-weight: bold; 
+}
+
+a:link { 
+    color: #0000ff; 
+}
+
+a:visited { 
+    color: #57126d; 
+}
+
+a:hover, a:focus { 
+    font-style: italic; 
+}
+
+/* the styles for the header */
+header {
+    border-bottom: 3px solid #931420;
+    padding-top: 1.5em;
+    padding-bottom: 2em; 
+    background: linear-gradient(30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100% );
+} 
+
+header img { 
+    float: left; 
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+header h2 {
+    font-size: 170%;
+    color: #80000e;
+}
+
+header h3 {
+    font-size: 130%;
+    font-style: italic;
+}
+
+.shadow {
+    text-shadow: 2px 2px 2px #800000; 
+}
+
+/* the styles for the navigation bar */
+nav {
+    clear: left;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    margin-left: 0;
+    margin-bottom: .5em;
+    list-style: none;
+    padding: .5em 2em 0 0;
+}
+
+nav li {
+    display: inline;
+    font-weight: bold;
+}
+
+
+#nav_bar ul {
+    list-style: none;  
+    overflow: hidden;
+    padding: .75em 0;  
+    background-color: #800000;
+}
+
+#nav_bar li { 
+    float: left;
+}
+
+#nav_bar a {
+    padding: 1em 2em;
+    text-decoration: none;
+    color: #fffded;
+}
+
+#nav_bar a.current { 
+    color: yellow; 
+}
+
+#nav_bar .dropbtn {
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+}
+
+.dropdown-content a {
+    background-color: #800000;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    padding: 1em 2em;
+    text-decoration: none;
+    color: #fffded;
+}
+
+#nav_bar .show {display:block;}
+
+/* the styles for the section */
+section {
+    width: 525px;
+    float: right;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+section h1 { 
+    font-size: 150%; 
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin: 0;
+}
+
+section h2 { 
+    font-size: 130%; 
+    color: #80000e;
+    padding-top: .5em;
+    padding-bottom: .25em;
+}
+
+section p{
+    padding-bottom: .5em;
+}
+
+section blockquote {
+    padding-left: 2em;
+    padding-right: 2em;  
+    font-style: italic;
+}
+
+section ul {
+    padding-bottom: .2em;
+    padding-left: 1.25em;    
+}
+
+section li {
+    padding-bottom: .35em;
+}
+
+/* the styles for the aside */
+aside {
+    width: 215px;
+    float: right;
+    padding-left: 20px; 
+    padding-right: 20px;
+}
+
+aside img { 
+    padding-bottom: 1em; 
+}
+
+aside h2 { 
+    font-size: 130%; 
+    color: #80000e;
+    padding-top: .5em;
+    padding-bottom: .25em;
+}
+
+aside h3 { 
+    font-size: 105%; 
+    padding-bottom: .25em;
+} 
+
+/* the styles for the article */
+article {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border-top: 3px solid #800000;
+    border-bottom: 3px solid #800000;
+}
+
+article img {
+    float: right;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 1px solid black;
+}
+
+article h2 {
+    padding-top: 0;
+}
+
+article h3 {
+    font-size: 105%;
+    padding-bottom: .25em;
+}
+
+/* the styles for the footer */
+footer p {
+    text-align: center;
+    color: white;
+    background-color: #800000;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+footer {
+    clear: both;
+}
+
+.menu-btn {
+    display: none;
+}
+@media screen and (max-width: 800px)
+{
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        width: 100%;
+        border: none;
+    }
+    header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    header img {
+        width: 30%;
+        height: 100%;
+    }
+    header h2, header h3 {
+        width: 100%;
+        text-align: center;
+    }
+    section, aside {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    article img {
+        width: 40%;
+        height: 100%;
+        margin: 5px;
+    }
+    aside h2 {
+        width: 100%;
+        text-align: center;
+    }
+    section ul {
+        width: 100%;
+    }
+    .guest {
+        width: 49%;
+    }
+    aside h3, aside img {
+        width: 100%;
+    }
+    .menu-btn{
+        text-transform: uppercase;
+        padding: .3em .45em;
+        background-color: #212121;
+        border: none;
+        border-radius: 2px;
+        margin: 5px;
+        color: white;
+        position: absolute;
+        right: 0;
+        display: flex;
+        align-content: center;
+        line-height: 1.6em;
+    }
+    .menu-btn:focus{
+        outline: none;
+    }
+    .menu-btn img{
+        margin-left: 5px;
+    }
+    nav {
+        min-height: 45px;
+        background-color: #800000;
+    }
+
+    nav ul {
+        display: none;
+        margin-left: 0;
+        margin-bottom: .5em;
+        list-style: none;
+        padding: .5em 2em 0 0;
+    }
+    #menu.active {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        transition: .5s;
+    }
+
+    #menu.active li{
+        display: inline-flex;
+        width: 100%;
+    }
+    #menu.active #Dropdown {
+        width: 100%;
+        position: absolute;
+        right: 0;
+    }
+    #menu.active #Dropdown a{
+        width: 100%;
+        padding-left: 3em;
+    }
+
+}
+
+@media screen and (max-width: 320px)
+{
+    .guest {
+        width: 90%;
+        margin: auto;
+    }
+
+    article img {
+        display: none;
+    }
+    header img {
+        width: 50%;
+        height: 100%;
+    }
+}

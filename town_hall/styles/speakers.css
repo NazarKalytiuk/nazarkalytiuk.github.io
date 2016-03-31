@@ -1,0 +1,160 @@
+/* the styles for the elements */
+* { padding: 0; margin: 0; }
+
+html {
+    background-color: white;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 800px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border: 3px solid #931420;
+    background-color: #fffded;
+}
+ 
+a { 
+    font-weight: bold; 
+}
+
+a:link { 
+    color: #0000ff; 
+}
+
+a:visited { 
+    color: #57126d; 
+}
+
+a:hover, a:focus { 
+    font-style: italic; 
+}
+
+/* the styles for the header */
+header {
+    border-bottom: 3px solid #931420;
+    padding-top: 1.5em;
+    padding-bottom: 2em; 
+    background: linear-gradient(30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100% );
+} 
+
+header img { 
+    float: left; 
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+header h2 {
+    font-size: 170%;
+    color: #80000e;
+}
+
+header h3 {
+    font-size: 130%;
+    font-style: italic;
+}
+
+.shadow {
+    text-shadow: 2px 2px 2px #800000; 
+}
+
+/* the styles for the section */
+section {
+    width: 525px;
+    float: right;
+    padding-bottom: 20px;
+}
+
+section h1 { 
+    font-size: 150%; 
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin: 0;
+}
+
+section h2 { 
+    font-size: 130%; 
+    color: #80000e;
+    padding-top: .5em;
+    padding-bottom: .25em;
+}
+
+section p{
+    padding-bottom: .5em;
+}
+
+section blockquote {
+    padding-left: 2em;
+    padding-right: 2em;  
+    font-style: italic;
+}
+
+section ul {
+    padding-bottom: .2em;
+    padding-left: 1.25em;    
+}
+
+section li {
+    padding-bottom: .35em;
+}
+
+/* the styles for the aside */
+aside {
+    width: 215px;
+    float: right;
+    padding-left: 20px; 
+    padding-right: 20px;
+}
+
+aside img { 
+    padding-bottom: 1em; 
+}
+
+aside h2 { 
+    font-size: 130%; 
+    color: #80000e;
+    padding-top: .5em;
+    padding-bottom: .25em;
+}
+
+aside h3 { 
+    font-size: 105%; 
+    padding-bottom: .25em;
+} 
+
+/* the styles for the section */
+article {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border: 3px solid #800000;
+}
+
+article img {
+    float: right;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+article h2 {
+    padding-top: 0;
+}
+
+article h3 {
+    font-size: 105%;
+    padding-bottom: .25em;
+}
+
+/* the styles for the footer */
+footer p {
+    text-align: center;
+    background-color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+footer {
+    clear: both;
+}
