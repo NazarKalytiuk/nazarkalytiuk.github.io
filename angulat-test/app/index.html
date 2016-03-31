@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolio">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="img/logo.png" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Scriptum portfolio">
+	<meta name="keywords" content="portfolio, frontend, HTML,CSS,JavaScript">
+	<title>Scriptum</title>
+	<!-- build:js css/vendor.min.css -->
+	<script src="bower_components/angular/angular.min.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:js js/scripts.min.js -->
+	<script src="js/controllers.js"></script>
+	<!-- endbuild -->
+</head>
+<body ng-controller="ListProjectCtrl">
+	<ul>
+		<li ng-repeat="project in projects">
+			<img src="{{project.url}}" alt="">
+			<span><a href="{{project.url}}">{{project.url}}</a></span><br>
+			<span>{{project.date}}</span><br>
+			<span>{{project.descr}}</span><br><br>
+		</li>
+	</ul>
+</body>
+</html>
