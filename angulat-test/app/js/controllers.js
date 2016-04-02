@@ -1,19 +1,25 @@
 "use scrict";
 
-var portfolio = angular.module('portfolio', []);
+var portfolio = angular.module('itemList', []);
 
-portfolio.controller('ListProjectCtrl', function($scope, $http) {
-	$http.get('projects.json').success(function (data) {
-		$scope.projects = data;
-		$scope.projects[0].url = "22";
-		$http({
-			method: 'POST',
-			url: '',
-			headers: {
-				'Content-Type': 'application/json',
-				'Accept': 'application/json' 
-			},
-			data: $scope.projects
-		})
-	});
+portfolio.controller('ListItemCtrl', function($scope) {
+	$scope.listName = "list name";
+	$scope.list = [
+	{
+		'name': 'salt',
+		'check': true
+	},
+	{
+		'name': 'bread',
+		'check': false
+	},
+	{
+		'name': 'meat',
+		'check': true
+	},
+	]
+	$scope.removeItem = function(item){
+		var index = $scope.list.indexOf(item);
+		$scope.list.splice(index, 1); 
+	}
 })

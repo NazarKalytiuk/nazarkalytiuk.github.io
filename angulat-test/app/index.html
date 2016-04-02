@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="portfolio">
+<html lang="en" ng-app="itemList">
 <head>
 	<meta charset="UTF-8">
-	<link rel="shortcut icon" href="img/logo.png" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Scriptum portfolio">
 	<meta name="keywords" content="portfolio, frontend, HTML,CSS,JavaScript">
 	<title>Scriptum</title>
+	<!-- build:css css/style.min.css -->
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- endbuild -->
 	<!-- build:js css/vendor.min.css -->
 	<script src="bower_components/angular/angular.min.js"></script>
 	<!-- endbower -->
@@ -16,14 +19,18 @@
 	<script src="js/controllers.js"></script>
 	<!-- endbuild -->
 </head>
-<body ng-controller="ListProjectCtrl">
-	<ul>
-		<li ng-repeat="project in projects">
-			<img src="{{project.url}}" alt="">
-			<span><a href="{{project.url}}">{{project.url}}</a></span><br>
-			<span>{{project.date}}</span><br>
-			<span>{{project.descr}}</span><br><br>
-		</li>
-	</ul>
+<body ng-controller="ListItemCtrl">
+	<header class="header"></header>
+	<section class="list">
+		<label for="" class="title">
+			<input type="text" ng-model="listName">
+			<div></div>
+		</label>
+		<label ng-repeat="item in list">
+			<input type="checkbox" ng-model="item.check">
+			<span ng-bind="item.name"></span> 
+			<button ng-click="removeItem(item)"><img src="img/clear.png" alt=""></button>
+		</label>
+	</section>
 </body>
 </html>
