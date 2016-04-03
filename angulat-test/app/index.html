@@ -8,29 +8,36 @@
 	<meta name="description" content="Scriptum portfolio">
 	<meta name="keywords" content="portfolio, frontend, HTML,CSS,JavaScript">
 	<title>Scriptum</title>
-	<!-- build:css css/style.min.css -->
-	<link rel="stylesheet" href="css/style.css" />
-	<!-- endbuild -->
-	<!-- build:js css/vendor.min.css -->
-	<script src="bower_components/angular/angular.min.js"></script>
-	<!-- endbower -->
-	<!-- endbuild -->
-	<!-- build:js js/scripts.min.js -->
-	<script src="js/controllers.js"></script>
-	<!-- endbuild -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<script src="css/vendor.min.css"></script>
+	<script src="js/scripts.min.js"></script>
 </head>
 <body ng-controller="ListItemCtrl">
 	<header class="header"></header>
 	<section class="list">
-		<label for="" class="title">
-			<input type="text" ng-model="listName">
+		<label for="" class="list__title">
+			<input type="text" ng-model="listName" placeholder="no name">
 			<div></div>
 		</label>
-		<label ng-repeat="item in list">
+
+		<label class="list__item" ng-repeat="item in list">
 			<input type="checkbox" ng-model="item.check">
 			<span ng-bind="item.name"></span> 
 			<button ng-click="removeItem(item)"><img src="img/clear.png" alt=""></button>
 		</label>
+
+		<button class="list__add-btn"><img src="img/add.png" alt=""></button>
 	</section>
+
+	<form class="list add" ng-submit="addItem()">
+		<div class="textfield">
+			<input type="text" required class="textfield__input" ng-model="AddText" placeholder="item">
+			<span class="textfield__bar"></span>
+		</div>
+		<button class="add" type="submit">
+			<img src="img/add.png" alt=""> <span>Add</span>
+		</button>
+	</form>
+
 </body>
 </html>
