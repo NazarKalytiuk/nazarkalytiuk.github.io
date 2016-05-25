@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="img/account-photo.png" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Simple chat">
+	<meta name="keywords" content="chat, uawebchallenge, frontend, html, css">
+	<title>Chat</title>
+	<link rel="stylesheet" href="css/vendor.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<main class="wrapper" role="main">
+		<section class="top">
+			<button class="hamburger">
+				<span class="hamburger__inner"></span>
+			</button>
+			<div class="top__useraccount">
+				<div class="search">
+					<input type="search" class="search__input" placeholder="Search">
+					<div class="search__icon"></div>
+				</div>
+				<div class="account">
+					<div class="account__photo">
+						<img src="img/account-photo.png" alt="your account photo">
+					</div>
+					<div class="account__description">
+						<span class="name">
+							Riko Sapto Dimo
+						</span>
+						<div class="status">
+							<select name="select-status">
+								<option value="Avaiable">Available</option>
+								<option value="Online">Online</option>
+								<option value="Offline">Offline</option>
+								<option value="DoNotDisturbed">Do not disturbed</option>
+							</select>
+							<div class="icon-dropdown"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container">
+			<ul class="nav">
+				<li><a href="#home" title="home"><i class="icon-home"></i></a></li>
+				<li><a href="#chat" title="chat" class="active"><i class="icon-chat"></i></a></li>
+				<li><a href="#chart" title="chart"><i class="icon-chart"></i></a></li>
+				<li><a href="#settings" title="settings"><i class="icon-settings"></i></a></li>
+			</ul>
+			<aside class="chat-list">
+				<header class="chat-list__header">
+					<h2 class="title">Chat</h2>
+					<button title="add new contact" class="newchatbtn">new</button>
+				</header>
+				<ul class="list">
+					<li class="list__item">
+						<div class="account__photo" data-badge="2">
+							<img src="img/contact-1.png" alt="Fikri Ruslandi">
+						</div>
+						<div class="description">
+							<h4 class="name">Fikri Ruslandi</h4>
+							<div class="available" data-available="true"></div>
+							<h5 class="last-message">Ko, Kumaha Project anu eta ...</h5>
+							<span class="how-long-ago">1 min</span>
+						</div>
+					</li>
+					<li class="list__item">
+						<div class="account__photo" data-badge="3">
+							<img src="img/contact-2.png" alt="Moch Ramdhani">
+						</div>
+						<div class="description">
+							<h4 class="name">Moch Ramdhani</h4>
+							<div class="available" data-available="true"></div>
+							<h5 class="last-message">Ane menang contes $1000 ...</h5>
+							<span class="how-long-ago">2 min</span>
+						</div>
+					</li>
+					<li class="list__item list__item--active">
+						<div class="account__photo" data-badge="">
+							<img src="img/contact-3.png" alt="Abu Abdullah Nugraha">
+						</div>
+						<div class="description">
+							<h4 class="name">Abu Abdullah Nugraha</h4>
+							<div class="available" data-available="true"></div>
+							<h5 class="last-message">is typing a message ...</h5>
+							<span class="how-long-ago" hidden>1 min</span>
+						</div>
+					</li>
+					<li class="list__item">
+						<div class="account__photo" data-badge="4">
+							<img src="img/contact-4.png" alt="Muhammad Fauzi">
+						</div>
+						<div class="description">
+							<h4 class="name">Muhammad Fauzi</h4>
+							<div class="available" data-available="false"></div>
+							<h5 class="last-message">Ko, Minjem sapatu basket ja ...</h5>
+							<span class="how-long-ago">9 min</span>
+						</div>
+					</li>
+					<li class="list__item">
+						<div class="account__photo" data-badge="">
+							<img src="img/contact-5.png" alt="Nurman Tri Gumelar">
+						</div>
+						<div class="description">
+							<h4 class="name">Nurman Tri Gumelar</h4>
+							<div class="available" data-available="false"></div>
+							<h5 class="last-message">Technical meeting lomba jog ...</h5>
+							<span class="how-long-ago">9 min</span>
+						</div>
+					</li>
+					<li class="list__item">
+						<div class="account__photo" data-badge="">
+							<img src="img/contact-6.png" alt="Bagas Rhafi">
+						</div>
+						<div class="description">
+							<h4 class="name">Bagas Rhafi</h4>
+							<div class="available" data-available="true"></div>
+							<h5 class="last-message">Heeh pan si jamar nge dunk </h5>
+							<span class="how-long-ago">45 min</span>
+						</div>
+					</li>
+					<li class="list__item">
+						<div class="account__photo" data-badge="">
+							<img src="img/contact-7.png" alt="Saepul Rohman">
+						</div>
+						<div class="description">
+							<h4 class="name">Saepul Rohman</h4>
+							<div class="available" data-available="false"></div>
+							<h5 class="last-message">Heeh wpap na </h5>
+							<span class="how-long-ago">2 hrs</span>
+						</div>
+					</li>
+					<li class="list__item">
+						<div class="account__photo" data-badge="6">
+							<img src="img/contact-8.png" alt="Muhamad Aldiansyah">
+						</div>
+						<div class="description">
+							<h4 class="name">Muhamad Aldiansyah</h4>
+							<div class="available" data-available="false"></div>
+							<h5 class="last-message">Bales tuh ko bisi disetrum</h5>
+							<span class="how-long-ago">2 hrs</span>
+						</div>
+					</li>
+				</ul>
+			</aside>
+			<section class="chat">
+				<header class="chat__header">
+					<div class="interlocutor">
+						<h2>Abu Abdullah Nugraha</h2>
+						<div class="available" data-available="true"></div>
+					</div>
+					<div class="controls">
+						<button class="controls__call" title="call"><i class="icon-call"></i></button>
+						<button class="controls__videocall" title="videocall"><i class="icon-videocall"></i></button>
+						<button class="controls__menu" title="menu"><i class="icon-menu"></i></button>
+					</div>
+				</header>
+				<div class="chat__messages">
+					<div class="message">
+						<div class="accout__photo">
+							<img src="img/contact-3.png" alt="Abu Abdullah Nugraha">
+						</div>
+						<p class="message-text">
+							Nanti  kita technical meeting lomba jogja 
+						</p>
+					</div>
+					<div class="message message--my">
+						<div class="accout__photo">
+							<img src="img/account-photo.png" alt="your account photo">
+						</div>
+						<p class="message-text">
+							Semua satu team ITone yang berangkat ke jogja?
+						</p>
+					</div>
+
+					<div class="message">
+						<div class="accout__photo">
+							<img src="img/contact-3.png" alt="Abu Abdullah Nugraha">
+						</div>
+						<p class="message-text">
+							Iya,semua kita berangkat pake pesawat biar cepet dari  jakarta 
+							berangkat, terus dari sini kita naik kereta ke jakarta
+						</p>
+					</div>
+					<div class="message message--my">
+						<div class="accout__photo">
+							<img src="img/account-photo.png" alt="your account photo">
+						</div>
+						<p class="message-text">
+							Ok,berarti kita beberpa hari disana?
+						</p>
+					</div>
+
+					<div class="message">
+						<div class="accout__photo">
+							<img src="img/contact-3.png" alt="Abu Abdullah Nugraha">
+						</div>
+						<p class="message-text">
+							Yaiyalah tenang kita tidur di hotel ko 
+						</p>
+					</div>
+					<div class="message message--my">
+						<div class="accout__photo">
+							<img src="img/account-photo.png" alt="your account photo">
+						</div>
+						<p class="message-text">
+							Sip lumayan seklian jalan jalan, semoga tim kita bisa menang 
+						</p>
+					</div>
+
+					<div class="message">
+						<div class="accout__photo">
+							<img src="img/contact-3.png" alt="Abu Abdullah Nugraha">
+						</div>
+						<p class="message-text">
+							Yaiyalah tenang kita tidur di hotel ko 
+						</p>
+					</div>
+				</div>
+
+				<form action="URL" class="write-message">
+					<textarea name="message" placeholder="Type your message ..."></textarea>
+					<label for="file-input-input" id="file-input-label" title="upload a file">
+						<input type="file" id="file-input-input">
+					</label>
+					<button type="submit" title="send">
+						<i class="icon-send"></i>
+					</button>
+				</form>
+			</section>
+			<section class="agenda">
+				<header class="agenda__header">
+					<h2 class="agenda__title">My Agenda</h2>
+					<div class="controls">
+						<button class="controls__menu" title="menu"><i class="icon-menu"></i></button>
+					</div>
+				</header>
+				<div class="calendar">
+					<div class="calendar__top">
+						<button class="back"><i class="icon-back"></i></button>
+						<span class="month">March 2016</span>
+						<button class="next"><i class="icon-next"></i></button>
+					</div>
+					<div class="calendar__days">
+						<span class="day">su</span>
+						<span class="day">mo</span>
+						<span class="day">tu</span>
+						<span class="day">we</span>
+						<span class="day">th</span>
+						<span class="day">fr</span>
+						<span class="day">sa</span>
+					</div>
+					<section class="calendar__dates">
+						<div class="date date--disabled"><span>28</span></div>
+						<div class="date date--disabled"><span>29</span></div>
+						<div class="date"><span>1</span></div>
+						<div class="date"><span>2</span></div>
+						<div class="date"><span>3</span></div>
+						<div class="date"><span>4</span></div>
+						<div class="date"><span>5</span></div>
+
+						<div class="date"><span>6</span></div>
+						<div class="date"><span>7</span></div>
+						<div class="date date--active"><span>8</span></div>
+						<div class="date date--active"><span>9</span></div>
+						<div class="date date--active"><span>10</span></div>
+						<div class="date date--active"><span>11</span></div>
+						<div class="date"><span>12</span></div>
+
+						<div class="date"><span>13</span></div>
+						<div class="date"><span>14</span></div>
+						<div class="date"><span>15</span></div>
+						<div class="date"><span>16</span></div>
+						<div class="date"><span>17</span></div>
+						<div class="date"><span>18</span></div>
+						<div class="date"><span>19</span></div>
+
+						<div class="date"><span>20</span></div>
+						<div class="date date--active"><span>21</span></div>
+						<div class="date"><span>22</span></div>
+						<div class="date"><span>23</span></div>
+						<div class="date"><span>24</span></div>
+						<div class="date date--current"><span>25</span></div>
+						<div class="date"><span>26</span></div>
+
+						<div class="date"><span>27</span></div>
+						<div class="date"><span>28</span></div>
+						<div class="date"><span>29</span></div>
+						<div class="date"><span>30</span></div>
+						<div class="date"><span>31</span></div>
+						<div class="date date--disabled"><span>1</span></div>
+						<div class="date date--disabled"><span>2</span></div>
+					</section>
+				</div>
+				<div class="tasklist">
+					<div class="task">
+						<h3 class="task__date">8 March</h3>
+						<p  class="task__description">Main basket bersama muhammad fauzi dan bagas rh ... </p>
+					</div>
+					<div class="task">
+						<h3 class="task__date">9 March</h3>
+						<p  class="task__description">Deadline project desain aplikasi $5000</p>
+					</div>
+					<div class="task">
+						<h3 class="task__date">10 March</h3>
+						<p  class="task__description">Meeting ITone persiapan lomba website di jogja dan ... </p>
+					</div>
+					<div class="task">
+						<h3 class="task__date">11 March</h3>
+						<p  class="task__description">Berangkat ke jogja untuk technical meeting </p>
+					</div>
+					<div class="task">
+						<h3 class="task__date">21 March</h3>
+						<p  class="task__description">Berangkat ke jogia untuk tecknical meeting </p>
+					</div>
+
+				</div>
+				<button class="add-new-agenda" title="add new agenda">
+					+ add new agenda
+				</button>
+			</section>
+		</section>
+	</main>
+</body>
+</html>
