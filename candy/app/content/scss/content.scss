@@ -1,0 +1,12 @@
+.content {
+	display: flex;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+.content.active-fixed, footer.active-fixed {
+	display: flex;
+	margin-left: 300px;
+	width: calc(100% - 300px);
+	flex-wrap: wrap;
+	transition: .35s;
+}

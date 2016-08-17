@@ -1,0 +1,44 @@
+.form__buttons {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+.inputbox {
+	margin: 1.2rem 1rem 0 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	&__input {
+		padding: .35rem;
+		width: 100%;
+		border: none;
+		display: flex;
+		border-bottom: 1px solid $grey--300;
+		&:focus { outline: none; }
+	}
+	&__label {
+		color: $grey--600;
+		position: absolute;
+		left: .35rem;
+		top: .35rem;
+		transition: .4s;
+	}
+	&__highlight {
+		transition: .4s;
+		bottom: 0;
+		position: absolute;
+		width: 0;
+		left: 0;
+		height: 2px;
+		background-color: $blue--50;
+	}
+}
+.inputbox__input:focus ~ .inputbox__label, .inputbox__input:valid ~ .inputbox__label{
+	top: -.875rem;
+	font-size: .8rem;
+	color: $grey--500;
+}
+.inputbox__input:focus ~ .inputbox__highlight, .inputbox__input:valid ~ .inputbox__highlight{
+	width: 100%;
+	background-color: $blue--500;
+}

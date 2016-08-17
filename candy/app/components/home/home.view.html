@@ -1,0 +1,19 @@
+﻿<section class="content container">
+  <div class="item col-4" ng-repeat="n in [1,2,3,4,5,6,7,8,9,10] track by $index">
+    <div class="item__img">
+      <img src="/app/content/img/turtle.jpg" alt="">
+    </div>
+    <div class="item__header">
+      <h2>Черепашка {{n}}</h2> <h2>{{n*200}}</h2>
+    </div>
+    <p class="item__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, cumque expedita eius, corporis sed consequatur porro fugit placeat iure minus fuga laborum quisquam, blanditiis tempora. Nemo illo ex optio error!</p>
+    <div class="item__controls">
+      <md-button>Подробнее</md-button>
+      <div class="rightbuttons">
+        <md-button class="md-icon-button"><md-icon class="material-icons">add_shopping_cart</md-icon></md-button>
+        <md-button class="md-icon-button"><md-icon class="material-icons">favorite</md-icon></md-button>
+        <md-button class="md-icon-button"><md-icon class="material-icons">share</md-icon></md-button>
+      </div>
+    </div>
+  </div>
+</section>

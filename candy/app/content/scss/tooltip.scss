@@ -1,0 +1,21 @@
+.tooltip {
+	white-space: nowrap;
+	display: flex;
+	visibility: hidden;
+	position: absolute;
+	border-radius: 2px;
+	bottom: -1rem;
+	min-width: 5rem;
+	left: calc(50% - 2.5rem);
+	max-height: 2rem;
+	padding: .5rem;
+	background-color: $grey--700;
+	opacity: 0;
+	font-size: .875rem;
+	transition: .3s;
+}
+*:hover > .tooltip {
+	visibility: visible;
+	opacity: .9;
+	bottom: -2.5rem;
+}

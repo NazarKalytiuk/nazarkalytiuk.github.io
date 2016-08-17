@@ -1,0 +1,194 @@
+.header-wrapper {
+	position: relative;
+	z-index: 100;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background-color: $light__blue--500;
+	color: $white;
+	@include shadow2;
+	&--fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+}
+.header {
+	display: flex;
+	font-family: 'Roboto-Regular';
+	align-items: center;
+	height: 4rem;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	&__logo {
+		display: flex;
+		height: 100%;
+		& .hamburger {
+			color: $white;
+			background-color: transparent;
+			border: none;
+			outline: none;
+			display: flex;
+			align-self: center;
+			line-height: 4rem;
+			padding: 1rem;
+			cursor: pointer;
+
+		}
+		& .sitename {
+			color: $white;
+			text-decoration: none;
+			font-family: 'Roboto-Regular';
+			font-size: 1.25rem;
+			text-transform: uppercase;
+			line-height: 4rem;
+			font-weight: 500;
+			vertical-align: middle;
+			display: flex;
+			align-self: center;
+		}
+	}
+	&__search {
+		height: 3rem;
+		display: flex;
+		width: 40rem;
+		max-width: 50%;
+		& input {
+			height: 100%;
+			width: 100%;
+			max-width: 100%;
+			font-size: 1.4rem;
+			padding: .5rem;
+			border: none;
+			&:focus {
+				outline: none;
+			}
+		}
+		& button {
+			min-width: 3rem;
+			font-size: 2rem;
+			background-color: $red--500;
+			color: white;
+			height: 100%;
+			border: none;
+			outline: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: .4s;
+			&:hover {
+				background-color: $red--700;
+				border-color: $red--700;
+			}
+		}
+	}
+	&__shoppingcart {
+		height: 4rem;
+		width: 4rem;
+		display: flex;
+		flex-shrink: 0;
+		background-color: $red--500;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		& i {
+			font-size: 3rem;
+			color: $white;
+		}
+		& span {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: .5rem;
+			right: .5rem;
+			color: white;
+			background-color: $blue--500;
+			border-radius: 50%;
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+	}
+}
+.login-form {
+	visibility: hidden;
+	overflow: hidden;
+	position: absolute;
+	top: calc(100% + .5rem);
+	right: .5rem;
+	@include shadow8;
+	width: 0px;
+	height: 0px;
+	opacity: 0;
+	background-color: $white;
+	transition: .25s ease;
+}
+.login-form--active {
+	visibility: visible;
+	max-width: 100vw;
+	max-height: 100vh;
+	width: 360px;
+	height: 300px;
+	opacity: 1;
+}
+.header__controls {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	& > * {
+		height: 2rem;
+		margin: 1rem;
+		position: relative;
+	}
+	& i {
+		font-size: 2rem;
+	}
+}
+.switch {
+	position: relative;
+    display: flex;
+    align-items: center;
+	& label {
+		cursor: pointer;
+		width: 2.5rem;
+		height: 1rem;
+		background: $grey--900;
+		opacity: .38;
+		border-radius: .5rem;
+		display: flex;
+		position: relative;
+		z-index: 1;
+	}
+	& input {
+		position: absolute;
+		width:0;
+		left: 0;
+		height:0;
+		top: 50%;
+		&::before {
+			cursor: pointer;
+			transition: .3s;
+			left: -.5rem;
+			top: -.750rem;
+			content: '';
+			position: absolute;
+			width: 1.5rem;
+			height: 1.5rem;
+			border-radius: 50%;
+			background-color: $grey--50;
+			z-index: 2;
+			@include shadow2;
+		}
+		&:checked::before {
+			left: 1.5rem;
+			opacity: 1;
+			background-color: $indigo--500;
+		}
+		&:checked ~ label {
+			background: $indigo--500;
+			opacity: .5;
+		}
+	}
+}

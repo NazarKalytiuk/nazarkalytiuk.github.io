@@ -1,0 +1,66 @@
+.item {
+	width: calc(25% - 2rem);
+	display: flex;
+	min-width: 330px;
+	width: 330px;
+	flex-grow: 2;
+	border-radius: 2px;
+	max-width: calc(25% - 2rem);
+	min-height: 1px;
+	flex-wrap: wrap;
+	@include shadow2;
+	margin: 1rem auto;
+	background-color: $white;
+	&__img {
+		width: 100%;
+		& img {
+			width: 100%;
+		}
+	}
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		padding: 1rem;
+		align-items: center;
+		& h2 {
+			color: $grey--800;
+			font-family: 'Roboto-Light'
+		}
+	}
+	&__descr {
+		margin-top: -1rem;
+		padding: 1rem;
+		font-size: .875rem;
+		line-height: 1.2rem;
+		color: $grey--500;
+		border-bottom: 1px solid $grey--300;
+	}
+	&__controls {
+		padding: .5rem;
+		display: flex;
+		align-content: center;
+		align-items: center;
+		width: 100%;
+		justify-content: space-between;
+		& .readmore {
+			text-transform: uppercase;
+			text-decoration: none;
+			border-radius: 2px;
+			padding: .5rem;
+			font-size: .875rem;
+			color: $blue--900;
+			transition: .3s;
+			&:hover {
+				background-color: $grey--50;
+			}
+		}
+		& .rightbuttons {
+			display: flex;
+			justify-content: flex-end;
+			& md-icon {
+				color: $light__blue--500;
+			}
+		}
+	}
+}

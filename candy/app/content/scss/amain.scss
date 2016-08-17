@@ -1,0 +1,44 @@
+body {
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Roboto-Regular';
+}
+.main {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	background-color: $grey--200;
+	min-height: 100vh;
+}
+.content {
+	display: flex;
+}
+.container {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+.btn {
+	cursor: pointer;
+	display: inline;
+	border-radius: 2px;
+	padding: .5rem;
+	border: none;
+	margin: 1rem;
+	background-color: $grey--300;
+	transition: .3s;
+	&:hover {
+		@include shadow2;
+		background-color: $grey--500;
+		color: $white;
+	}
+	&:focus {
+		outline: none;
+	}
+	&--submit {
+		text-transform: uppercase;
+		&:hover {
+			background-color: $light__blue--500;
+		}
+	}
+}

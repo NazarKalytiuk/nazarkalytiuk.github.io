@@ -1,0 +1,103 @@
+.aside {
+	position: fixed;
+	z-index: 50;
+	top: 4rem;
+	left: -300px;
+	height: 100%;
+	min-width: 200px;
+	max-width: 80%;
+	width: 300px;
+	display: flex;
+	margin-left: 0;
+	opacity: 0;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	background-color: $white;
+	transition: .35s;
+	align-items: flex-start;
+	@include md-shadow24;
+}
+.aside.active-fixed {
+	left: 0;
+	opacity: 1;
+	@include md-shadow2;
+}
+.aside__header {
+	cursor: pointer;
+	min-height: 160px;
+	height: 15%;
+	display: flex;
+	width: 100%;
+	background:transparent url('../img/profile-background.png') no-repeat center/cover;
+}
+.aside__header__user {
+	display: flex;
+	align-self: flex-end;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+	align-content: center;
+	line-height: 1.5rem;
+	font-size: .9rem;
+	color: $grey--50;
+	padding: .3rem .4rem;
+	background-color: rgba(0,0,0,0.2);
+}
+.aside.active {
+	opacity: 1;
+	left: 0;
+}
+.aside__menu {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	font-family: 'Roboto-Regular';
+	font-size: .95rem;
+	& ul {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		border-top: 1px solid $grey--300;
+		&.user-menu {
+			height: 10.5rem;
+			transition: .3s;
+			opacity: 1;
+		}
+		&.hidden {
+			height: 0px;
+			opacity: .0;
+			overflow: hidden;
+		}
+		& li {
+			display: flex;
+			width: 100%;
+			& a {
+				&.current {
+					background-color: $grey--100;
+					color: $grey--900;
+				}
+				& i {
+					font-size: 1.2rem;
+					width: 1.2rem;
+					height: 1.2rem;
+				}
+				& span {
+					padding: 1rem;
+					line-height: 1.5rem;
+				}
+				padding: 0 1rem;
+				display: flex;
+				align-items: center;
+				width: 100%;
+				line-height: 1rem;
+				text-decoration: none;
+				color: $grey--700;
+				transition: .3s;
+				&:hover {
+					background-color: $grey--200;
+				}
+			}
+		}
+	}
+}

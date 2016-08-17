@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us" data-ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>CandyShop</title>
+
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,400italic,500,500italic,700' rel='stylesheet' type='text/css'> -->
+  <!-- build:css css/vendor.min.css -->
+  <!-- bower:css -->
+  <link href="bower_components/normalize-css/normalize.css" rel="stylesheet"/>
+  <link href="bower_components/angular-loading-bar/build/loading-bar.min.css" rel="stylesheet" />
+  <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="bower_components/angular-material/angular-material.min.css" rel="stylesheet" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> -->
+  <!-- build:css css/style.min.css -->
+  <link rel="stylesheet" href="app/content/css/style.css" />
+  <link rel="stylesheet" href="app/content/css/footerstyle.css" />
+</head>
+<body>
+  <aside class="aside" data-ng-include src="'app/shared/sidebar-left.html'"></aside>
+  <div class="header-wrapper" data-ng-include src="'app/shared/header.html'"></div>
+  <!-- Angular views -->
+  <main class="main" data-ng-view=""></main>
+  <footer data-ng-include src="'app/shared/footer.html'"></footer>
+  <!-- bower:js -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <!--   <script>
+      if (!window.jQuery.ui) {
+        document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>');
+      }
+    </script> -->
+    <!-- Angular vendors -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
+
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script> 
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <!-- endbower -->
+    <!-- Angular app -->
+    <script src="app/app.js"></script>
+    <script src="app/app.config.routes.js"></script>
+    <script src="app/components/home/home.controller.js"></script>
+    <script src="app/components/product/product.controller.js"></script>
+    <script src="app/components/profile/profile.controller.js"></script>
+    <script src="app/components/settings/settings.controller.js"></script>
+    <script src="app/components/login/login.controller.js"></script>
+    <!-- endbuild -->
+    <script src="app/content/js/scripts.js"></script>
+  </body>
+  </html>
