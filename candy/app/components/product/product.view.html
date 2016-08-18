@@ -2,7 +2,7 @@
 	<article class="product">
 		<header class="product__header">
 			<div class="product__img">
-				<img src="/app/content/img/turtle.jpg" alt="">
+				<img src="./app/content/img/turtle.jpg" alt="">
 			</div>
 			<div class="product__maininfo">
 				<h1 class="product__title">Product 1</h1>
@@ -23,16 +23,43 @@
 			<div class="product__info">
 				<div class="product__photos">
 					<h2>Фото</h2>
-					<img src="/app/content/img/turtle.jpg" alt="">
-					<img src="/app/content/img/turtle.jpg" alt="">
-					<img src="/app/content/img/turtle.jpg" alt="">
-					<img src="/app/content/img/turtle.jpg" alt="">
+					<img src="./app/content/img/turtle.jpg" alt="">
+					<img src="./app/content/img/turtle.jpg" alt="">
+					<img src="./app/content/img/turtle.jpg" alt="">
+					<img src="./app/content/img/turtle.jpg" alt="">
 				</div>
 				<div class="product__desc">
 					<h2>Описание</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit maiores, incidunt quidem natus. Ut dolorum deleniti reiciendis tenetur illum, beatae cum, molestiae laborum, nisi omnis nulla laboriosam, ipsam nemo consectetur.</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, ex?</p>
 				</div>
+			</div>
+			<div class="reviews">
+				<div class="reviews__rating">
+					<div class="product__rating" ng-repeat="i in getArray(5) track by $index">
+						<i class="material-icons" ng-repeat="j in getArray(5-$index) track by $index">star</i>
+						<i class="material-icons" ng-repeat="k in getArray($index) track by $index">star_border</i>
+						<span>10982</span>
+						<md-progress-linear value="50"></md-progress-linear>
+					</div>
+				</div>
+				<md-list flex class="reviews__reviews">
+					<md-list-item class="md-3-line" ng-click="null" ng-repeat="item in [1,2,3,4,5,6,7] track by $index">
+						<img ng-src="./app/content/img/turtle.jpg" class="md-avatar">
+						<div class="md-list-item-text">
+							<h3>Name {{item}}</h3>
+							<div class="product__rating">
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star_border</i>
+							</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur debitis voluptatibus consequatur atque sapiente qui, illum aperiam alias quas cupiditate temporibus, quod sint ullam adipisci voluptatem deserunt sunt, veniam eum.</p>
+						</div>
+						<md-divider md-inset ng-if="!$last"></md-divider>
+					</md-list-item>
+				</md-list>
 			</div>
 		</article>
 	</section>

@@ -10,15 +10,15 @@
         controller: 'ProductController'
       })
       .when('/profile', {
-        templateUrl: '/app/components/profile/profile.view.html',
+        templateUrl: './app/components/profile/profile.view.html',
         controller: 'ProfileController'
       })
       .when('/settings', {
-        templateUrl: '/app/components/settings/settings.view.html',
+        templateUrl: './app/components/settings/settings.view.html',
         controller: 'SettingsController'
       })
       .when('/login', {
-        templateUrl: '/app/components/login/login.view.html',
+        templateUrl: './app/components/login/login.view.html',
         controller: 'LoginController'
       })
       .otherwise({
