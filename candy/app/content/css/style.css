@@ -421,6 +421,7 @@ footer.active-fixed
     padding: .5rem;
 
     border: none;
+    border-radius: 0;
 }
 .header__search input:focus
 {
@@ -451,6 +452,12 @@ footer.active-fixed
     -webkit-justify-content: center;
     -ms-flex-pack: center;
             justify-content: center;
+}
+.header__search button i
+{
+    display: block;
+
+    margin: auto;
 }
 .header__search button:hover
 {
