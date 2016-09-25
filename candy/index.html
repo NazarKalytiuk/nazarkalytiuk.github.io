@@ -19,10 +19,11 @@
   <link rel="stylesheet" href="app/content/css/style.css" />
   <link rel="stylesheet" href="app/content/css/footerstyle.css" />
   <link rel="stylesheet" href="app/content/css/regist.css" />
+  <link rel="stylesheet" href="app/content/css/cart.css" />
   <meta name="viewport" content="width=device-width" />
 </head>
 <body>
-  <aside class="aside" data-ng-include src="'app/shared/sidebar-left.html'"></aside>
+  <aside class="aside nav-drawer" data-ng-include src="'app/shared/sidebar-left.html'"></aside>
   <div class="header-wrapper" data-ng-include src="'app/shared/header.html'"></div>
   <!-- Angular views -->
   <main class="main" data-ng-view=""></main>
@@ -53,7 +54,9 @@
     <script src="app/components/profile/profile.controller.js"></script>
     <script src="app/components/settings/settings.controller.js"></script>
     <script src="app/components/login/login.controller.js"></script>
+    <script src="app/components/registration/registration.controller.js"></script>
+    <script src="app/components/cart/cart.controller.js"></script>
     <!-- endbuild -->
-    <script src="app/content/js/scripts.js"></script>
+    <script src="app/content/js/vendor.js"></script>
   </body>
   </html>

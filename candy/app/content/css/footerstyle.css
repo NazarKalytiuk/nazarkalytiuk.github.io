@@ -71,7 +71,7 @@ footer{
     text-transform: uppercase;
     font-family: 'Roboto-Regular';
     font-size: 4vh;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: #fff;
 }
 .footer__p{
@@ -220,6 +220,7 @@ footer{
     height:100%;
     background: inherit;
     overflow:hidden;
+    overflow:hidden;
 }
 
 .hex .corner-1 {
@@ -311,7 +312,7 @@ footer{
 .footer__bot p{
     margin: 0;
     text-align: center;
-    font-size: 2vh;
+    font-size: 3vh;
 }
 
 
@@ -324,8 +325,11 @@ footer{
   .footer__top {
     height: 15rem;
 }
+    .footer__p{
+        font-size: 3vh;
+    }
 .footer-container p{
-    font-size: 2.5vh;
+    font-size: 3vh;
 }
 .border{
     border-left: none;
@@ -338,7 +342,7 @@ footer{
     font-size: 3vh;
 }
 .hex {
-    width: 10.4vh;
+        width: 10.4vh;
     height: 6vh;
     font-size: 2vh;
 }
@@ -353,6 +357,9 @@ footer{
 .top__height{
     height: 30rem;
 }
+    .footer__bot p{
+     font-size: 2vh;   
+    }
 }
 @media screen and (max-width:500px){
     .mid__items{
@@ -368,7 +375,7 @@ footer{
     .hex {
      width: 15vw;
      height: 8.4vw;
-     font-size: 1.5vh;  
+     font-size: 2.5vh;  
  }
  .footer__top{
     height: 20rem;
@@ -393,13 +400,14 @@ footer{
         height: 40rem;
     }
     .hex {
-        width: 8vh;
-        height: 4.5vh;
+        width: 9vh;
+        height: 5vh;
         font-size: 2vh;
     }
     .top__height{
         height: 45rem;
     }
+    
 }
 @media screen and (max-width:320px){
     .footer__top{
@@ -409,8 +417,8 @@ footer{
         margin-top: 4vh;
     }
     .hex {
-        width: 8vh;
-        height: 4.8vh;
+           width: 8vh;
+        height: 4.5vh;
         font-size: 2vh;    
     }
     .top__height{

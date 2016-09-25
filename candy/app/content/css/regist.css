@@ -1,0 +1,35 @@
+.regitration{
+<<<<<<< HEAD
+    margin:  auto;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: baseline;
+}
+		
+ .regitration-conteiner {
+    width: 350px;
+     text-align: center;
+}
+=======
+    height: auto;
+    
+    margin: 0 auto;
+}
+		
+ .regitration-conteiner {
+    width: 320px;
+    padding: 15% 0;
+}
+.registration-h{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.main-form{
+    border: 1px solid #E6E6E6;
+}
+>>>>>>> 7b64d134edb74b870e133a468ca0bfed6e12aca0

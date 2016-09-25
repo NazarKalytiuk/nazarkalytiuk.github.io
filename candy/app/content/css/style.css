@@ -75,11 +75,11 @@ body
     background-color: #03a9f4;
 }
 
-.aside
+.nav-drawer
 {
     position: fixed;
-    z-index: 50;
-    top: 4rem;
+    z-index: 9999; 
+    top: 0;
     left: -300px;
 
     display: -webkit-flex;
@@ -87,34 +87,40 @@ body
     display:         flex;
 
     width: 300px;
-    min-width: 200px;
-    max-width: 80%;
-    height: 100%;
-    margin-left: 0;
+    height: 100vh;
 
-    transition: .35s;
-
-    opacity: 0;
-    background-color: #fff;
-    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, .2), 0 24px 38px 3px rgba(0, 0, 0, .14), 0 9px 46px 8px rgba(0, 0, 0, .12); 
+    background-color: white;
 
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    -webkit-align-content: flex-start;
-    -ms-flex-line-pack: start;
-            align-content: flex-start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
             align-items: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+            align-content: flex-start;
 }
 
-.aside.active-fixed
+.nav-drawer.opened
 {
     left: 0;
 
-    opacity: 1;
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12);
+    transition: .35s;
+
+    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, .2), 0 13px 19px 2px rgba(0, 0, 0, .14), 0 5px 24px 4px rgba(0, 0, 0, .12);
+}
+
+.nav-drawer.closed
+{
+    left: -300px;
+
+    transition: .35s;
+}
+
+.nav-drawer.touched
+{
+    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, .2), 0 13px 19px 2px rgba(0, 0, 0, .14), 0 5px 24px 4px rgba(0, 0, 0, .12);
 }
 
 .aside__header

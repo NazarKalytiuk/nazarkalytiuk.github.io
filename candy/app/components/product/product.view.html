@@ -40,7 +40,7 @@
 						<i class="material-icons" ng-repeat="j in getArray(5-$index) track by $index">star</i>
 						<i class="material-icons" ng-repeat="k in getArray($index) track by $index">star_border</i>
 						<span>10982</span>
-						<md-progress-linear value="50"></md-progress-linear>
+						<md-progress-linear md-mode="buffer" md-buffer-value="100" value="30"></md-progress-linear>
 					</div>
 				</div>
 				<md-list flex class="reviews__reviews">
