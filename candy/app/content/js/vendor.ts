@@ -71,7 +71,7 @@ $(document).on('touchstart', function(event) {
 	if(posx < 30) {
 		element.addClass('touched');
 	}
-	if(posx > 300) {
+	if(posx > 320) {
 		element.removeClass('opened');
 		element.removeClass('touched');
 		element.addClass('closed');
@@ -81,7 +81,7 @@ $(document).on('touchstart', function(event) {
 $(document).on('touchend', function(event) {
 	let element = $('.nav-drawer');
 	console.log(`left = ${element.offset().left}`)
-	if(parseInt(element.offset().left) > -150) {
+	if(parseInt(element.offset().left) > -100) {
 		element.css('left', 0);
 		element.addClass('opened');
 		element.removeClass('closed');
