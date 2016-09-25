@@ -71,7 +71,7 @@ $(document).on('touchstart', function(event) {
 	if(posx < 30) {
 		element.addClass('touched');
 	}
-	if(posx > 320) {
+	if(posx > 350) {
 		element.removeClass('opened');
 		element.removeClass('touched');
 		element.addClass('closed');
