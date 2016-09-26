@@ -172,10 +172,6 @@
 				display: block;
 				margin: auto;
 			}
-			&:hover {
-				background-color: $red--700;
-				border-color: $red--700;
-			}
 		}
 		&.active {
 			top: 0;

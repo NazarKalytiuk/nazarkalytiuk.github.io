@@ -618,11 +618,6 @@ footer.active-fixed
 
         margin: auto;
     }
-    .header__search button:hover
-    {
-        border-color: #d32f2f; 
-        background-color: #d32f2f;
-    }
     .header__search.active
     {
         top: 0;
