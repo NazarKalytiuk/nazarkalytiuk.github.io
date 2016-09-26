@@ -514,6 +514,8 @@ footer.active-fixed
     width: 4rem;
     height: 4rem;
 
+    text-decoration: none;
+
     background-color: transparent;
 
     -webkit-flex-shrink: 0;
