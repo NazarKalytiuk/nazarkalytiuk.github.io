@@ -68,7 +68,7 @@
     padding: 1vh;
 }
 
-md-input-container {
+.production_md_container {
     max-width: 30vh;
     width: 5.75rem;
     margin: 5px;

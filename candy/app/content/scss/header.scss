@@ -14,7 +14,25 @@
 		width: 100%;
 	}
 }
+.search-button {
+	margin: 0 0 0 auto;
+	height: 4rem;
+	width: 4rem;
+	display: flex;
+	flex-shrink: 0;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	& i {
+		font-size: 2rem;
+		color: $white;
+	}
+}
 .header {
+	width: 100%;
 	display: flex;
 	font-family: 'Roboto-Regular';
 	align-items: center;
@@ -53,7 +71,7 @@
 		height: 3rem;
 		display: flex;
 		width: 40rem;
-		margin: 0 1rem;
+		margin: 0 0 0 auto;
 		max-width: 50%;
 		& input {
 			height: 100%;
@@ -69,8 +87,8 @@
 		}
 		& button {
 			min-width: 3rem;
-			font-size: 2rem;
-			background-color: $red--500;
+			font-size: 3rem;
+			background-color: transparent;
 			color: white;
 			height: 100%;
 			border: none;
@@ -80,13 +98,15 @@
 			justify-content: center;
 			cursor: pointer;
 			transition: .4s;
+			&[type="submit"] {
+				background-color: #fff;
+				color: black;
+				display: none;
+			}
 			& i {
+				font-size: 2.5rem;
 				display: block;
 				margin: auto;
-			}
-			&:hover {
-				background-color: $red--700;
-				border-color: $red--700;
 			}
 		}
 	}
@@ -95,7 +115,7 @@
 		width: 4rem;
 		display: flex;
 		flex-shrink: 0;
-		background-color: $red--500;
+		background-color: transparent;
 		justify-content: center;
 		align-items: center;
 		position: relative;
@@ -111,10 +131,54 @@
 			top: .5rem;
 			right: .5rem;
 			color: white;
-			background-color: $blue--500;
+			background-color: $blue--A700;
 			border-radius: 50%;
 			width: 1.5rem;
 			height: 1.5rem;
+		}
+	}
+}
+@media screen and (max-width: 960px) {
+	.header__search {
+		position: absolute;
+		top: -100%;
+		width: 100%;
+		max-width: 100%;
+		z-index: 100;
+		transition: .4s;
+		& button {
+			min-width: 3rem;
+			font-size: 3rem;
+			background-color: transparent;
+			color: white;
+			height: 100%;
+			border: none;
+			outline: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: .4s;
+			&[type="submit"] {
+				background-color: #fff;
+				color: $grey--700;
+				position: absolute;
+				display: flex;
+				right: 0;
+			}
+			& i {
+				font-size: 2.5rem;
+				display: block;
+				margin: auto;
+			}
+			&:hover {
+				background-color: $red--700;
+				border-color: $red--700;
+			}
+		}
+		&.active {
+			top: 0;
+			height: 100%;
 		}
 	}
 }
@@ -154,8 +218,8 @@
 }
 .switch {
 	position: relative;
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 	& label {
 		cursor: pointer;
 		width: 2.5rem;

@@ -14,6 +14,16 @@ $(document).on("click", ".aside__header", function () {
 $(document).on("click", ".aside__menu a", function () {
 	$(".aside").removeClass('active');
 });
+$(document).on("click", ".search-button", function () {
+	$(".header__search").addClass('active');
+});
+$(document).mouseup(function (e) { // событие клика по веб-документу
+  var tw = $(".header"); // тут указываем ID элемента
+  if (!tw.is(e.target) // если клик был не по нашему блоку
+    && tw.has(e.target).length === 0) { // и не по его дочерним элементам
+  	$(".header__search").removeClass('active');
+}
+});
 $(document).on("click", ".switch", function () {
 	if ($(".switch input").is(":checked")) {
 		$('.aside').addClass('active-fixed');
@@ -51,13 +61,13 @@ $(document).mouseup(function (e) { // событие клика по веб-до
 $(document).on('touchmove', function(event) {
 	let element = $('.nav-drawer');
 	console.log(element.offset().left)
-	let diff = parseInt(element.offset().left) + 300;
+	let diff = parseInt(parseInt(element.offset().left) + element.width());
 	let posx = parseInt(event.changedTouches[0].clientX);
 	console.log(`diff - ${diff}`);
 	console.log(`posx - ${posx}`);
-	console.log(`event ${event.changedTouches[0].clientX}`)
-	console.log(`width ${element.width()}`)
-	if(diff - posx < 50 && diff - posx > -50 && posx < 300) {
+	console.log(`event - ${event.changedTouches[0].clientX}`)
+	console.log(`width - ${element.width()}`)
+	if(diff - posx < 50 && diff - posx > -50 && posx < element.width()) {
 		element.css('left', (event.changedTouches[0].clientX - element.width()));
 	}
 })
@@ -65,23 +75,23 @@ $(document).on('touchstart', function(event) {
 	let element = $('.nav-drawer');
 	element.removeClass('opened');
 	element.removeClass('closed');
-	let diff = parseInt(element.offset().left) + 300;
+	let diff = parseInt(parseInt(element.offset().left) + element.width());
 	let posx = parseInt(event.changedTouches[0].clientX);
 	console.log(diff - posx < 50 && diff - posx > -50)
 	if(posx < 30) {
 		element.addClass('touched');
 	}
-	if(posx > 350) {
+	if(posx > element.width() + 20) {
 		element.removeClass('opened');
 		element.removeClass('touched');
 		element.addClass('closed');
-		element.css('left', -300);
+		element.css('left', -element.width());
 	}
 })
 $(document).on('touchend', function(event) {
 	let element = $('.nav-drawer');
 	console.log(`left = ${element.offset().left}`)
-	if(parseInt(element.offset().left) > -100) {
+	if(parseInt(element.offset().left) > (-element.width()/3)) {
 		element.css('left', 0);
 		element.addClass('opened');
 		element.removeClass('closed');

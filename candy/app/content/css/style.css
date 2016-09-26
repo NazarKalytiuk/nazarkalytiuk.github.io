@@ -80,13 +80,14 @@ body
     position: fixed;
     z-index: 9999; 
     top: 0;
-    left: -300px;
+    left: -100%;
 
     display: -webkit-flex;
     display: -ms-flexbox;
     display:         flex;
 
-    width: 300px;
+    width: 80%;
+    max-width: 300px;
     height: 100vh;
 
     background-color: white;
@@ -113,7 +114,7 @@ body
 
 .nav-drawer.closed
 {
-    left: -300px;
+    left: -100%;
 
     transition: .35s;
 }
@@ -330,6 +331,39 @@ footer.active-fixed
     width: 100%;
 }
 
+.search-button
+{
+    position: relative; 
+
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: 4rem;
+    height: 4rem;
+    margin: 0 0 0 auto;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+            flex-shrink: 0;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.search-button i
+{
+    font-size: 2rem;
+
+    color: #fff;
+}
+
 .header
 {
     font-family: 'Roboto-Regular';
@@ -338,6 +372,7 @@ footer.active-fixed
     display: -ms-flexbox;
     display:         flex;
 
+    width: 100%;
     height: 4rem;
 
     -webkit-align-items: center;
@@ -409,7 +444,7 @@ footer.active-fixed
     width: 40rem;
     max-width: 50%; 
     height: 3rem;
-    margin: 0 1rem;
+    margin: 0 0 0 auto;
 }
 .header__search input
 {
@@ -429,7 +464,7 @@ footer.active-fixed
 }
 .header__search button
 {
-    font-size: 2rem;
+    font-size: 3rem;
 
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -444,7 +479,7 @@ footer.active-fixed
     color: white;
     border: none;
     outline: none;
-    background-color: #f44336;
+    background-color: transparent;
 
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -453,16 +488,20 @@ footer.active-fixed
     -ms-flex-pack: center;
             justify-content: center;
 }
+.header__search button[type='submit']
+{
+    display: none; 
+
+    color: black;
+    background-color: #fff;
+}
 .header__search button i
 {
+    font-size: 2.5rem;
+
     display: block;
 
     margin: auto;
-}
-.header__search button:hover
-{
-    border-color: #d32f2f; 
-    background-color: #d32f2f;
 }
 .header__shoppingcart
 {
@@ -475,7 +514,7 @@ footer.active-fixed
     width: 4rem;
     height: 4rem;
 
-    background-color: #f44336;
+    background-color: transparent;
 
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
@@ -508,7 +547,7 @@ footer.active-fixed
 
     color: white;
     border-radius: 50%;
-    background-color: #2196f3;
+    background-color: #2962ff;
 
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -516,6 +555,78 @@ footer.active-fixed
     -webkit-align-items: center;
     -ms-flex-align: center;
             align-items: center;
+}
+
+@media screen and (max-width: 960px)
+{
+    .header__search
+    {
+        position: absolute;
+        z-index: 100;
+        top: -100%;
+
+        width: 100%;
+        max-width: 100%;
+
+        transition: .4s;
+    }
+    .header__search button
+    {
+        font-size: 3rem;
+
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display:         flex;
+
+        min-width: 3rem;
+        height: 100%;
+
+        cursor: pointer;
+        transition: .4s; 
+
+        color: white;
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+                align-items: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .header__search button[type='submit']
+    {
+        position: absolute;
+        right: 0; 
+
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display:         flex;
+
+        color: #616161;
+        background-color: #fff;
+    }
+    .header__search button i
+    {
+        font-size: 2.5rem;
+
+        display: block;
+
+        margin: auto;
+    }
+    .header__search button:hover
+    {
+        border-color: #d32f2f; 
+        background-color: #d32f2f;
+    }
+    .header__search.active
+    {
+        top: 0;
+
+        height: 100%;
+    }
 }
 
 .login-form
