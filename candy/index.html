@@ -24,10 +24,12 @@
 </head>
 <body>
   <aside class="aside nav-drawer" data-ng-include src="'app/shared/sidebar-left.html'"></aside>
-  <div class="header-wrapper" data-ng-include src="'app/shared/header.html'"></div>
   <!-- Angular views -->
-  <main class="main" data-ng-view=""></main>
-  <footer data-ng-include src="'app/shared/footer.html'"></footer>
+  <main class="main">
+  <div class="header-wrapper" data-ng-include src="'app/shared/header.html'"></div>
+    <div data-ng-view=""></div>
+    <footer data-ng-include src="'app/shared/footer.html'"></footer>
+  </main>
   <!-- bower:js -->
   <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>

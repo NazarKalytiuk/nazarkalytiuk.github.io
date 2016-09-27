@@ -48,9 +48,23 @@ $(document).mouseup(function (e) { // событие клика по веб-до
   var tw = $(".aside"); // тут указываем ID элемента
   if (!tw.is(e.target) // если клик был не по нашему блоку
     && tw.has(e.target).length === 0) { // и не по его дочерним элементам
-  	$(".aside").removeClass('active');
-}
+  	if($(window).width() < 960) {
+  		$(".aside").removeClass('opened');
+  		$(".aside").addClass('closed');
+  		$(".aside").css('left', -$(".aside").width())
+  	}
+  }
 });
+$(window).on('resize', function (argument) {
+	if($(window).width() < 960) {
+  		$(".aside").removeClass('opened');
+  		$(".aside").addClass('closed');
+  	}
+  	else {
+  		$(".aside").addClass('opened');
+  		$(".aside").removeClass('closed');
+  	}
+})
 $(document).mouseup(function (e) { // событие клика по веб-документу
   var tw = $(".login-form"); // тут указываем ID элемента
   if (!tw.is(e.target) // если клик был не по нашему блоку

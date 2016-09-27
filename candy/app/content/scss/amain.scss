@@ -8,6 +8,7 @@ body {
 	flex-wrap: wrap;
 	background-color: $grey--200;
 	min-height: 100vh;
+	transition: .35s;
 }
 .content {
 	display: flex;

@@ -47,7 +47,21 @@ $(document).mouseup(function (e) {
     var tw = $(".aside"); // тут указываем ID элемента
     if (!tw.is(e.target) // если клик был не по нашему блоку
         && tw.has(e.target).length === 0) {
-        $(".aside").removeClass('active');
+        if ($(window).width() < 960) {
+            $(".aside").removeClass('opened');
+            $(".aside").addClass('closed');
+            $(".aside").css('left', -$(".aside").width());
+        }
+    }
+});
+$(window).on('resize', function (argument) {
+    if ($(window).width() < 960) {
+        $(".aside").removeClass('opened');
+        $(".aside").addClass('closed');
+    }
+    else {
+        $(".aside").addClass('opened');
+        $(".aside").removeClass('closed');
     }
 });
 $(document).mouseup(function (e) {
