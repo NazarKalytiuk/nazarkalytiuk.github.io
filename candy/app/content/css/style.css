@@ -2,9 +2,19 @@ body
 {
     font-family: 'Roboto-Regular';
 
-    width: 100%; 
+    position: relative;
+
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: 100%;
+    height: 100vh; 
 
     -webkit-font-smoothing: antialiased;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 }
 
 .main
@@ -13,7 +23,6 @@ body
     display: -ms-flexbox;
     display:         flex;
 
-    width: 100%;
     min-height: 100vh;
 
     transition: .35s; 
@@ -23,13 +32,6 @@ body
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-}
-
-.content
-{
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display:         flex;
 }
 
 .container
@@ -90,7 +92,7 @@ body
     display: -ms-flexbox;
     display:         flex;
 
-    width: 80%;
+    width: 300px;
     max-width: 300px;
     height: 100vh;
 

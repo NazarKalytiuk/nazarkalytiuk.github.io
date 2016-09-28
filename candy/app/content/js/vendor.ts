@@ -24,18 +24,6 @@ $(document).mouseup(function (e) { // событие клика по веб-до
   	$(".header__search").removeClass('active');
 }
 });
-$(document).on("click", ".switch", function () {
-	if ($(".switch input").is(":checked")) {
-		$('.aside').addClass('active-fixed');
-		$('.content').addClass('active-fixed');
-		$('footer').addClass('active-fixed');
-	}
-	else {
-		$('.aside').removeClass('active-fixed');
-		$('.content').removeClass('active-fixed');
-		$('footer').removeClass('active-fixed');
-	}
-});
 
 $(window).scroll(function () {
 	var sticky = $('.header-wrapper'),
