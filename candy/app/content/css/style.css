@@ -1,6 +1,8 @@
 body
 {
-    font-family: 'Roboto-Regular'; 
+    font-family: 'Roboto-Regular';
+
+    width: 100%; 
 
     -webkit-font-smoothing: antialiased;
 }
