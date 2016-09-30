@@ -170,7 +170,14 @@
 			justify-content: center;
 			cursor: pointer;
 			transition: .4s;
-			&[type="submit"] {
+			&.search__exit {
+				background-color: #fff;
+				color: $grey--700;
+				position: absolute;
+				display: flex;
+				left: 0;
+			}
+			&.search__submit {
 				background-color: #fff;
 				color: $grey--700;
 				position: absolute;
@@ -185,6 +192,7 @@
 		}
 		&.active {
 			top: 0;
+			left: 0;
 			height: 100%;
 		}
 	}

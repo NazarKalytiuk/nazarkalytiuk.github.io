@@ -1,8 +1,3 @@
-/// <reference path="jquery.d.ts" />
-$(document).on("click", ".login", function () {
-	$('.login-form').addClass('login-form--active');
-	$('.login .tooltip').toggle();
-});
 $(document).on("click", ".hamburger", function () {
 	$('.nav-drawer').css('left', 0);
 	$('.nav-drawer').addClass('opened');
@@ -16,6 +11,9 @@ $(document).on("click", ".aside__menu a", function () {
 });
 $(document).on("click", ".search-button", function () {
 	$(".header__search").addClass('active');
+});
+$(document).on("click", ".search__exit", function () {
+	$(".header__search").removeClass('active');
 });
 $(document).mouseup(function (e) { // событие клика по веб-документу
   var tw = $(".header"); // тут указываем ID элемента
@@ -53,13 +51,7 @@ $(window).on('resize', function (argument) {
   		$(".aside").removeClass('closed');
   	}
 })
-$(document).mouseup(function (e) { // событие клика по веб-документу
-  var tw = $(".login-form"); // тут указываем ID элемента
-  if (!tw.is(e.target) // если клик был не по нашему блоку
-    && tw.has(e.target).length === 0) { // и не по его дочерним элементам
-  	$(".login-form").removeClass('login-form--active');
-}
-});
+
 $(document).on('touchmove', function(event) {
 	let element = $('.nav-drawer');
 	console.log(element.offset().left)

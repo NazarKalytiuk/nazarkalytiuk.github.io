@@ -1,8 +1,3 @@
-/// <reference path="jquery.d.ts" />
-$(document).on("click", ".login", function () {
-    $('.login-form').addClass('login-form--active');
-    $('.login .tooltip').toggle();
-});
 $(document).on("click", ".hamburger", function () {
     $('.nav-drawer').css('left', 0);
     $('.nav-drawer').addClass('opened');
@@ -17,23 +12,14 @@ $(document).on("click", ".aside__menu a", function () {
 $(document).on("click", ".search-button", function () {
     $(".header__search").addClass('active');
 });
+$(document).on("click", ".search__exit", function () {
+    $(".header__search").removeClass('active');
+});
 $(document).mouseup(function (e) {
     var tw = $(".header"); // тут указываем ID элемента
     if (!tw.is(e.target) // если клик был не по нашему блоку
         && tw.has(e.target).length === 0) {
         $(".header__search").removeClass('active');
-    }
-});
-$(document).on("click", ".switch", function () {
-    if ($(".switch input").is(":checked")) {
-        $('.aside').addClass('active-fixed');
-        $('.content').addClass('active-fixed');
-        $('footer').addClass('active-fixed');
-    }
-    else {
-        $('.aside').removeClass('active-fixed');
-        $('.content').removeClass('active-fixed');
-        $('footer').removeClass('active-fixed');
     }
 });
 $(window).scroll(function () {
@@ -62,13 +48,6 @@ $(window).on('resize', function (argument) {
     else {
         $(".aside").addClass('opened');
         $(".aside").removeClass('closed');
-    }
-});
-$(document).mouseup(function (e) {
-    var tw = $(".login-form"); // тут указываем ID элемента
-    if (!tw.is(e.target) // если клик был не по нашему блоку
-        && tw.has(e.target).length === 0) {
-        $(".login-form").removeClass('login-form--active');
     }
 });
 $(document).on('touchmove', function (event) {
