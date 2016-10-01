@@ -1,0 +1,21 @@
+{
+  "name": "nazarkalytiuk.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "git add -A && git commit -m 'default' && git push origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NazarKalytiuk/nazarkalytiuk.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NazarKalytiuk/nazarkalytiuk.github.io/issues"
+  },
+  "homepage": "https://github.com/NazarKalytiuk/nazarkalytiuk.github.io#readme"
+}
