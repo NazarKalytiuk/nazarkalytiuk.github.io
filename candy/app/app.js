@@ -1,4 +1,4 @@
-﻿// Angular module for the application
+// Angular module for the application
 var app = angular.module('app', [
   'ngRoute',
   'LocalStorageModule',

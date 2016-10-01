@@ -1,6 +1,6 @@
 html {
 	width: 100%;
-	height: 100vh;
+	height: auto;
 	position: relative;
 	display: flex;
 	overflow-x: hidden;
@@ -13,20 +13,12 @@ body {
 	flex-wrap: wrap;
 	width: 100%;
 	background-color: $grey--200;
-	min-height: 100vh;
 }
 .main {
 	display: flex;
 	flex-wrap: wrap;
-	min-height: 100vh;
 	transition: .35s;
 	position: relative;
-}
-.container {
-	display: flex;
-	width: 100%;
-	flex-wrap: wrap;
-	margin: 0 auto;
 }
 .btn {
 	cursor: pointer;
