@@ -151,9 +151,12 @@ body
 }
 .nav-drawer header .icons__account
 {
+    position: relative;
+
     display: -webkit-flex;
     display: -ms-flexbox;
     display:         flex;
+    overflow: hidden; 
 
     width: 64px;
     height: 64px;
@@ -172,6 +175,11 @@ body
 }
 .nav-drawer header .icons__account img
 {
+    position: relative;
+
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
     overflow: hidden; 
 
     width: 64px;

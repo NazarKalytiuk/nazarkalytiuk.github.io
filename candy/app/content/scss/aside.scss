@@ -37,7 +37,11 @@
 				align-content: center;
 				align-items: center;
 				justify-content: center;
+				position: relative;
+				overflow: hidden;
 				& img {
+					display: flex;
+					position: relative;
 					border-radius: 50%;
 					height: 64px;
 					width: 64px;
