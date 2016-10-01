@@ -23,6 +23,13 @@ $(document).mouseup(function (e) {
     }
 });
 $(window).scroll(function () {
+    var drawer = $('nav-drawer');
+    if (drawer.hasClass('opened') || drawer.hasClass('touched') || drawer.css('left') === "0px") {
+        $('body').css('overflow-y', 'hidden');
+    }
+    else {
+        $('body').css('overflow-y', 'scroll');
+    }
     var sticky = $('.header-wrapper'), scroll = $(window).scrollTop();
     if (scroll >= 1)
         sticky.addClass('header-wrapper--fixed');

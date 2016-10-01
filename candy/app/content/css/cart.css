@@ -115,7 +115,7 @@
     
     margin: 1rem;
 }
-.total-price p, span{
+.total-price p span{
     text-transform: uppercase;
 }
 .full-cost{
