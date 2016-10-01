@@ -5,12 +5,145 @@
 	top: 0;
 	left: -100%;
 	height: 100vh;
-	background-color: white;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
 	align-content: flex-start;
 	z-index: 9999;
+	background-color: #fafafa;
+	overflow-y: scroll;
+	& header {
+		height: 148px;
+		box-sizing: border-box;
+		position: relative;
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		align-content: space-between;
+		background: url('../img/drawer-bg.jpg') center/cover;
+		& .icons {
+			width: 100%;
+			display: flex;
+			padding: 16px 16px 4px 16px;
+			height: 84px;
+			justify-content: space-between;
+			align-items: flex-start;
+			align-content: flex-start;
+			&__account {
+				border-radius: 50%;
+				width: 64px;
+				height: 64px;
+				display: flex;
+				align-content: center;
+				align-items: center;
+				justify-content: center;
+				& img {
+					border-radius: 50%;
+					height: 64px;
+					width: 64px;
+					overflow: hidden;
+				}
+			}
+			&__secondary {
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+				display: flex;
+				align-content: center;
+				align-items: center;
+				justify-content: center;
+				& img {
+					border-radius: 50%;
+					height: 40px;
+					width: 40px;
+					overflow: hidden;
+				}
+			}
+		}
+		& .subheader {
+			height: 64px;
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			width: 100%;
+			padding: 8px 16px;
+			align-content: center;
+				align-items: center;
+			&__name {
+				width: 100%;
+				font-family: "Roboto";
+				font-weight: 500;
+				font-size: 14px;
+				color: #ffffff;
+			}
+			&__email {
+				width: 100%;
+				font-family: "Roboto";
+				font-weight: 400;
+				font-size: 14px;
+				color: #ffffff;
+				display: flex;
+				justify-content: space-between;
+				align-content: center;
+				align-items: center;
+			}
+		}
+	}
+}
+.content {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.list {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	align-items: flex-start;
+	&__header {
+		height: 48px;
+		width: 100%;
+		line-height: 48px;
+		padding: 0 16px;
+		opacity: .54;
+		font-family: 'Roboto';
+		font-weight: 500;
+		font-size: 14px;
+	}
+	&__item {
+		width: 100%;
+		height: 48px;
+		display: flex;
+		align-content: center;
+		align-items: center;
+		& a {
+			display: flex;
+			align-content: center;
+			align-items: center;
+			width: 100%;
+			height: 48px;
+			text-decoration: none;
+			color: #000;
+			& i {
+				padding: 0 16px;
+				opacity: .54;
+				line-height: 48px;
+				font-size: 26px;
+			}
+			& span {
+				opacity: .87;
+				width: 100%;
+				line-height: 48px;
+				padding: 0 16px;
+				font-family: 'Roboto';
+				font-size: 14px;
+				white-space: nowrap; 
+  				overflow: hidden; 
+    			text-overflow: ellipsis; 
+			}
+		}
+	}
 }
 .nav-drawer.opened {
 	left: 0;
@@ -23,81 +156,6 @@
 }
 .nav-drawer.touched {
 	box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12);
-}
-.aside__header {
-	cursor: pointer;
-	min-height: 160px;
-	height: 15%;
-	display: flex;
-	width: 100%;
-	background:transparent url('../img/profile-background.png') no-repeat center/cover;
-}
-.aside__header__user {
-	display: flex;
-	align-self: flex-end;
-	justify-content: space-between;
-	width: 100%;
-	align-items: center;
-	align-content: center;
-	line-height: 1.5rem;
-	font-size: .9rem;
-	color: $grey--50;
-	padding: .3rem .4rem;
-	background-color: rgba(0,0,0,0.2);
-}
-.aside__menu {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	font-family: 'Roboto-Regular';
-	font-size: .95rem;
-	& ul {
-		width: 100%;
-		display: flex;
-		flex-wrap: wrap;
-		list-style: none;
-		border-top: 1px solid $grey--300;
-		&.user-menu {
-			height: 10.5rem;
-			transition: .3s;
-			opacity: 1;
-		}
-		&.hidden {
-			height: 0px;
-			opacity: .0;
-			overflow: hidden;
-		}
-		& li {
-			display: flex;
-			width: 100%;
-			& a {
-				&.current {
-					background-color: $grey--100;
-					color: $grey--900;
-				}
-				& i {
-					font-size: 1.2rem;
-					width: 1.2rem;
-					height: 1.2rem;
-				}
-				& span {
-					padding: 1rem;
-					line-height: 1.5rem;
-				}
-				padding: 0 1rem;
-				display: flex;
-				align-items: center;
-				width: 100%;
-				line-height: 1rem;
-				text-decoration: none;
-				color: $grey--700;
-				transition: .3s;
-				&:hover {
-					background-color: $grey--200;
-				}
-			}
-		}
-	}
 }
 @media screen and (min-width: 960px) {
 	.nav-drawer {
