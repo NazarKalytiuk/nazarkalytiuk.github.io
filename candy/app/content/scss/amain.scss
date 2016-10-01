@@ -12,17 +12,15 @@ body {
 	position: relative;
 	flex-wrap: wrap;
 	width: 100%;
-	height: 100vh;
-	overflow-x: hidden;
+	background-color: $grey--200;
+	min-height: 100vh;
 }
 .main {
 	display: flex;
 	flex-wrap: wrap;
-	background-color: $grey--200;
 	min-height: 100vh;
 	transition: .35s;
 	position: relative;
-	overflow-x: hidden;
 }
 .container {
 	display: flex;

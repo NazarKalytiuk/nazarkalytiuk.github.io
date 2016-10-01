@@ -136,7 +136,10 @@
 }
 @media screen and (max-width: 960px) {
 	.header-wrapper--fixed {
-		width: 100%
+		width: 100%;
+		position: fixed;
+		top: 0;
+		right: 0;
 	}
 	.header__logo .hamburger {
 		color: $white;
