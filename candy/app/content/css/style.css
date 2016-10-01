@@ -20,10 +20,11 @@ body
     display: -webkit-flex;
     display: -ms-flexbox;
     display:         flex;
+    overflow-x: hidden; 
 
     width: 100%;
 
-    background-color: #eee; 
+    background-color: #eee;
 
     -webkit-font-smoothing: antialiased;
     -webkit-flex-wrap: wrap;

@@ -13,6 +13,7 @@ body {
 	flex-wrap: wrap;
 	width: 100%;
 	background-color: $grey--200;
+	overflow-x: hidden;
 }
 .main {
 	display: flex;
