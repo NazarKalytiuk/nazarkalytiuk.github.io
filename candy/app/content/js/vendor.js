@@ -57,6 +57,9 @@ $(window).on('resize', function (argument) {
         $(".aside").removeClass('closed');
     }
 });
+var touchStartTime;
+var touchStartPosX;
+var isMenuOpen;
 $(document).on('touchmove', function (event) {
     var element = $('.nav-drawer');
     console.log(element.offset().left);
@@ -69,11 +72,28 @@ $(document).on('touchmove', function (event) {
     if (diff - posx < 50 && diff - posx > -50 && posx < element.width()) {
         element.css('left', (event.changedTouches[0].clientX - element.width()));
     }
+    /// onOpening 
+    if (touchStartPosX < 50 && posx < element.offsetWidth && isMenuOpen == false && posx > touchStartPosX && parseInt(element.css('left')) < 0) {
+        element.css('left', "" + (event.changedTouches[0].clientX - element.offsetWidth - touchStartPosX));
+        console.log(element.css('left'));
+        console.log("onOpening");
+    }
+    ///onClosing
+    if (posx < parseInt(element.width()) + 10 && isMenuOpen) {
+        var posx_1 = parseInt(event.changedTouches[0].clientX);
+        if (posx_1 < (parseInt(element.width()))) {
+            element.css('left', "" + (-this.touchStartPosX + event.changedTouches[0].clientX));
+        }
+        console.log("onClosing");
+    }
 });
 $(document).on('touchstart', function (event) {
     var element = $('.nav-drawer');
     element.removeClass('opened');
     element.removeClass('closed');
+    element.css('transitionDuration', '');
+    touchStartPosX = event.changedTouches[0].clientX;
+    touchStartTime = event.timeStamp;
     var diff = parseInt(parseInt(element.offset().left) + element.width());
     var posx = parseInt(event.changedTouches[0].clientX);
     console.log(diff - posx < 50 && diff - posx > -50);
@@ -100,6 +120,21 @@ $(document).on('touchend', function (event) {
         element.removeClass('opened');
         element.addClass('closed');
         element.removeClass('touched');
+    }
+    if (touchStartTime + 150 > event.timeStamp && event.changedTouches[0].clientX > touchStartPosX) {
+        element.removeClass('closed');
+        element.addClass('opened');
+        element.css('transitionDuration', "0.1s");
+        element.css('left', '0px');
+        isMenuOpen = true;
+    }
+    if (touchStartTime + 150 > event.timeStamp && event.changedTouches[0].clientX < touchStartPosX) {
+        element.removeClass('opened');
+        element.addClass('closed');
+        console.log('closed event');
+        element.css('transitionDuration', "0.1s");
+        element.css('left', -element.width());
+        isMenuOpen = false;
     }
 });
 //# sourceMappingURL=vendor.js.map

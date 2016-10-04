@@ -50,57 +50,96 @@ $(document).mouseup(function (e) { // событие клика по веб-до
 });
 $(window).on('resize', function (argument) {
 	if($(window).width() < 960) {
-  		$(".aside").removeClass('opened');
-  		$(".aside").addClass('closed');
-  	}
-  	else {
-  		$(".aside").addClass('opened');
-  		$(".aside").removeClass('closed');
-  	}
+		$(".aside").removeClass('opened');
+		$(".aside").addClass('closed');
+	}
+	else {
+		$(".aside").addClass('opened');
+		$(".aside").removeClass('closed');
+	}
 })
 
+var touchStartTime
+var touchStartPosX
+var isMenuOpen
 $(document).on('touchmove', function(event) {
 	let element = $('.nav-drawer');
 	console.log(element.offset().left)
 	let diff = parseInt(parseInt(element.offset().left) + element.width());
 	let posx = parseInt(event.changedTouches[0].clientX);
+
 	console.log(`diff - ${diff}`);
 	console.log(`posx - ${posx}`);
 	console.log(`event - ${event.changedTouches[0].clientX}`)
 	console.log(`width - ${element.width()}`)
+
 	if(diff - posx < 50 && diff - posx > -50 && posx < element.width()) {
 		element.css('left', (event.changedTouches[0].clientX - element.width()));
 	}
-})
-$(document).on('touchstart', function(event) {
-	let element = $('.nav-drawer');
-	element.removeClass('opened');
-	element.removeClass('closed');
-	let diff = parseInt(parseInt(element.offset().left) + element.width());
-	let posx = parseInt(event.changedTouches[0].clientX);
-	console.log(diff - posx < 50 && diff - posx > -50)
-	if(posx < 30) {
-		element.addClass('touched');
-	}
-	if(posx > element.width() + 20) {
-		element.removeClass('opened');
-		element.removeClass('touched');
-		element.addClass('closed');
-		element.css('left', -element.width());
-	}
-})
-$(document).on('touchend', function(event) {
-	let element = $('.nav-drawer');
-	console.log(`left = ${element.offset().left}`)
-	if(parseInt(element.offset().left) > (-element.width()/3)) {
-		element.css('left', 0);
-		element.addClass('opened');
-		element.removeClass('closed');
-	}
-	else {
-		element.css('left', -element.width());
-		element.removeClass('opened');
-		element.addClass('closed');
-		element.removeClass('touched');
-	}
-})
+	/// onOpening 
+	if(touchStartPosX < 50 && posx < element.offsetWidth && isMenuOpen == false && posx > touchStartPosX && parseInt(element.css('left')) < 0) {
+		element.css('left', `${event.changedTouches[0].clientX - element.offsetWidth - touchStartPosX}`;
+			console.log(element.css('left'))
+			console.log(`onOpening`)
+		}
+        ///onClosing
+        if(posx < parseInt(element.width()) + 10 && isMenuOpen) {
+        	let posx = parseInt(event.changedTouches[0].clientX);
+        	if(posx < (parseInt(element.width()))) {
+
+        		element.css('left', `${-this.touchStartPosX + event.changedTouches[0].clientX}`);   
+        	}
+        	console.log(`onClosing`)
+        }
+    })
+		$(document).on('touchstart', function(event) {
+			let element = $('.nav-drawer');
+			element.removeClass('opened');
+			element.removeClass('closed');
+			element.css('transitionDuration', '');
+			touchStartPosX = event.changedTouches[0].clientX;
+			touchStartTime = event.timeStamp;
+			let diff = parseInt(parseInt(element.offset().left) + element.width());
+			let posx = parseInt(event.changedTouches[0].clientX);
+			console.log(diff - posx < 50 && diff - posx > -50)
+			if(posx < 30) {
+				element.addClass('touched');
+			}
+			if(posx > element.width() + 20) {
+				element.removeClass('opened');
+				element.removeClass('touched');
+				element.addClass('closed');
+				element.css('left', -element.width());
+			}
+		})
+		$(document).on('touchend', function(event) {
+			let element = $('.nav-drawer');
+			console.log(`left = ${element.offset().left}`)
+			if(parseInt(element.offset().left) > (-element.width()/3)) {
+				element.css('left', 0);
+				element.addClass('opened');
+				element.removeClass('closed');
+			}
+			else {
+				element.css('left', -element.width());
+				element.removeClass('opened');
+				element.addClass('closed');
+				element.removeClass('touched');
+			}
+
+			if(touchStartTime + 150 > event.timeStamp && event.changedTouches[0].clientX > touchStartPosX) {
+				element.removeClass('closed');
+				element.addClass('opened');
+				element.css('transitionDuration', `0.1s`)
+				element.css('left', '0px');
+				isMenuOpen = true;
+			}
+			if(touchStartTime + 150 > event.timeStamp && event.changedTouches[0].clientX < touchStartPosX) {
+				element.removeClass('opened');
+				element.addClass('closed');
+				console.log('closed event')
+				element.css('transitionDuration', `0.1s`)
+				element.css('left', -element.width());
+				isMenuOpen = false;
+			}
+		})
