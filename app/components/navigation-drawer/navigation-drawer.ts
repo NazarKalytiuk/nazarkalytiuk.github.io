@@ -86,14 +86,14 @@ export class NavDrawerComponent {
         let diff = parseInt(this.element.style.left) + parseInt(window.getComputedStyle(this.element).width);
         this.overlay.style.opacity = `${diff / (parseInt(window.getComputedStyle(this.element).width) * 2)}`;
         console.log(event.timeStamp - this.touchStartTime)
-        if (this.touchStartTime + 100 > event.timeStamp && event.changedTouches[0].clientX > this.touchStartPosX) {
+        if (this.touchStartTime + 200 > event.timeStamp && event.changedTouches[0].clientX > this.touchStartPosX) {
             this.element.classList.remove('closed');
             this.element.classList.add('opened');
             this.element.style.transitionDuration = `0.1s`
             this.element.style.left = '0px';
             this.isMenuOpen = true;
         }
-        if (this.touchStartTime + 100 > event.timeStamp && event.changedTouches[0].clientX < this.touchStartPosX) {
+        if (this.touchStartTime + 200 > event.timeStamp && event.changedTouches[0].clientX < this.touchStartPosX) {
             this.element.classList.remove('opened');
             this.element.classList.add('closed');
             console.log('closed event')
