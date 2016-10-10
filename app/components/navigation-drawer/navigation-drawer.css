@@ -18,6 +18,7 @@
           align-content: flex-start;
   z-index: 4;
   bottom: 0;
+  overflow-y: scroll;
   background-color: #fafafa; }
   .nav-drawer header {
     height: 148px;
