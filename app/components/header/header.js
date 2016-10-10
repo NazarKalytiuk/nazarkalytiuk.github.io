@@ -27,7 +27,8 @@ var HeaderComponent = (function () {
         core_1.Component({
             selector: 'nk-header',
             providers: [header_service_1.HeaderService],
-            templateUrl: './app/components/header/header.html'
+            templateUrl: './app/components/header/header.html',
+            styleUrls: ['./app/components/header/header.css']
         }), 
         __metadata('design:paramtypes', [header_service_1.HeaderService])
     ], HeaderComponent);

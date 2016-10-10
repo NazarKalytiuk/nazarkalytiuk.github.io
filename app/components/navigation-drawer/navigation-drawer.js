@@ -73,14 +73,14 @@ var NavDrawerComponent = (function () {
             var diff = parseInt(_this.element.style.left) + parseInt(window.getComputedStyle(_this.element).width);
             _this.overlay.style.opacity = "" + diff / (parseInt(window.getComputedStyle(_this.element).width) * 2);
             console.log(event.timeStamp - _this.touchStartTime);
-            if (_this.touchStartTime + 100 > event.timeStamp && event.changedTouches[0].clientX > _this.touchStartPosX) {
+            if (_this.touchStartTime + 200 > event.timeStamp && event.changedTouches[0].clientX > _this.touchStartPosX) {
                 _this.element.classList.remove('closed');
                 _this.element.classList.add('opened');
                 _this.element.style.transitionDuration = "0.1s";
                 _this.element.style.left = '0px';
                 _this.isMenuOpen = true;
             }
-            if (_this.touchStartTime + 100 > event.timeStamp && event.changedTouches[0].clientX < _this.touchStartPosX) {
+            if (_this.touchStartTime + 200 > event.timeStamp && event.changedTouches[0].clientX < _this.touchStartPosX) {
                 _this.element.classList.remove('opened');
                 _this.element.classList.add('closed');
                 console.log('closed event');
@@ -112,6 +112,7 @@ var NavDrawerComponent = (function () {
             selector: 'nav-drawer',
             templateUrl: './app/components/navigation-drawer/navigation-drawer.html',
             styleUrls: ['./app/components/navigation-drawer/navigation-drawer.css'],
+            encapsulation: core_1.ViewEncapsulation.None,
         }), 
         __metadata('design:paramtypes', [])
     ], NavDrawerComponent);

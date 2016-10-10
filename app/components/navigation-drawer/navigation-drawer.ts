@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation} from '@angular/core';
 import { OverlayComponent } from '../../components/overlay/overlay'
 
 @Component({
     selector: 'nav-drawer',
     templateUrl: './app/components/navigation-drawer/navigation-drawer.html',
     styleUrls: ['./app/components/navigation-drawer/navigation-drawer.css'],
+    encapsulation: ViewEncapsulation.None,
 })
 //TODO
 // відмінить скрол сторінки якшо відкрите

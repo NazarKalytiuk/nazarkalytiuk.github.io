@@ -7,7 +7,8 @@ import 'rxjs/add/operator/map';
 @Component({
     selector: 'nk-header',
     providers: [HeaderService],
-    templateUrl: './app/components/header/header.html'
+    templateUrl: './app/components/header/header.html',
+    styleUrls: ['./app/components/header/header.css']
 })
 export class HeaderComponent {
     constructor(private hs : HeaderService){}

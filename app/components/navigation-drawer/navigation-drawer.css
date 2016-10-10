@@ -1,6 +1,6 @@
 .nav-drawer {
   position: fixed;
-  width: 240px;
+  width: 280px;
   top: 0;
   left: -100%;
   height: 100vh;
@@ -18,8 +18,7 @@
           align-content: flex-start;
   z-index: 4;
   bottom: 0;
-  background-color: #fafafa;
-  overflow-y: hidden; }
+  background-color: #fafafa; }
   .nav-drawer header {
     height: 148px;
     box-sizing: border-box;
@@ -34,7 +33,7 @@
     -webkit-align-content: space-between;
         -ms-flex-line-pack: justify;
             align-content: space-between;
-    background: url("../../img/drawer-bg.jpg") center/cover; }
+    background: url("./app/img/drawer-bg.jpg") center/cover; }
     .nav-drawer header .icons {
       width: 100%;
       display: -webkit-flex;
@@ -218,7 +217,6 @@
   transition: .35s; }
 
 .nav-drawer.touched {
-  overflow-y: hidden;
   box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12); }
 
 .nav-drawer.opened {
